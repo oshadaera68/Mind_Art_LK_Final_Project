@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="649.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeSelectAllFormController">
+   <children>
+      <Label layoutX="295.0" layoutY="23.0" text="Employee Select All Form" textFill="#2451d7">
+         <font>
+            <Font name="Behind The Scenery" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="46.0" layoutY="74.0" prefHeight="0.0" prefWidth="783.0" />
+      <TableView fx:id="tblEmployee" layoutX="57.0" layoutY="92.0" prefHeight="517.0" prefWidth="761.0">
+        <columns>
+          <TableColumn fx:id="colEmpID" prefWidth="199.0" text="Emp Id" />
+          <TableColumn fx:id="colEmpName" prefWidth="152.0" text="Emp Name" />
+            <TableColumn fx:id="colAddress" prefWidth="200.0" text="Address" />
+            <TableColumn fx:id="colTeleNo" prefWidth="209.0" text="TeleNo" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

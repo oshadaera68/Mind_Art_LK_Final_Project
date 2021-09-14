@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="634.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierFormController">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="293.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="59.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/supplier.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="50.0" layoutY="228.0" text="Supplier Section" textFill="WHITE">
+               <font>
+                  <Font name="Behind The Scenery" size="29.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="74.0" layoutY="303.0" onAction="#addSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #3498db;" text="Add Supplier" textFill="WHITE" />
+            <JFXButton layoutX="74.0" layoutY="356.0" onAction="#searchSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #27ae60;" text="Search Supplier" textFill="WHITE" />
+            <JFXButton layoutX="72.0" layoutY="412.0" onAction="#deleteSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #e74c3c;" text="Delete Supplier" textFill="WHITE" />
+            <JFXButton layoutX="71.0" layoutY="470.0" onAction="#supplierTableOnAction" style="-fx-background-color: #9b59b6;" text="All Supplier Table" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="context" layoutX="293.0" layoutY="1.0" prefHeight="649.0" prefWidth="812.0" />
+   </children>
+</AnchorPane>

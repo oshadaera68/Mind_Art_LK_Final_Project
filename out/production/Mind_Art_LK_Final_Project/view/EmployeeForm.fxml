@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="634.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeFormController">
+   <children>
+      <AnchorPane prefHeight="649.0" prefWidth="312.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="72.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/servent.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="55.0" layoutY="214.0" text="Employee Section" textFill="#272fe5">
+               <font>
+                  <Font name="Behind The Scenery" size="29.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="73.0" layoutY="291.0" onAction="#addEmployeeOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #3498db;" text="Add Employee" textFill="WHITE" />
+            <JFXButton layoutX="72.0" layoutY="344.0" onAction="#searchEmployeeOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #9b59b6;" text="Search Employee" textFill="WHITE" />
+            <JFXButton layoutX="72.0" layoutY="397.0" onAction="#deleteEmployeeOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #e74c3c;" text="Delete Employee" textFill="WHITE" />
+            <JFXButton layoutX="73.0" layoutY="451.0" onAction="#selectAllEmployeeOnAction" style="-fx-background-color: #27ae60;" text="Select All Employee" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="context" layoutX="311.0" prefHeight="649.0" prefWidth="873.0" />
+   </children>
+</AnchorPane>
