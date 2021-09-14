@@ -21,8 +21,11 @@ public class SupplierOrderFormController {
         context.getChildren().add(load);
     }
 
-    public void searchSupplierOrderOnAction(ActionEvent actionEvent) {
-
+    public void searchSupplierOrderOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/SearchSupplierOrderForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 
     public void deleteSupplierOrderOnAction(ActionEvent actionEvent) {
