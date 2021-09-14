@@ -23,8 +23,9 @@
             </Label>
             <JFXButton layoutX="74.0" layoutY="303.0" onAction="#addSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #3498db;" text="Add Supplier" textFill="WHITE" />
             <JFXButton layoutX="74.0" layoutY="356.0" onAction="#searchSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #27ae60;" text="Search Supplier" textFill="WHITE" />
-            <JFXButton layoutX="72.0" layoutY="412.0" onAction="#deleteSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #e74c3c;" text="Delete Supplier" textFill="WHITE" />
-            <JFXButton layoutX="71.0" layoutY="470.0" onAction="#supplierTableOnAction" style="-fx-background-color: #9b59b6;" text="All Supplier Table" textFill="WHITE" />
+            <JFXButton layoutX="73.0" layoutY="412.0" onAction="#deleteSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #e74c3c;" text="Delete Supplier" textFill="WHITE" />
+            <JFXButton layoutX="72.0" layoutY="470.0" onAction="#supplierTableOnAction" style="-fx-background-color: #9b59b6;" text="All Supplier Table" textFill="WHITE" />
+            <JFXButton layoutX="71.0" layoutY="530.0" onAction="#supplierOrderFormOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #e67e22;" text="Supplier Order" textFill="WHITE" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="context" layoutX="293.0" layoutY="1.0" prefHeight="649.0" prefWidth="812.0" />

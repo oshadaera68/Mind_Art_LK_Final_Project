@@ -32,7 +32,17 @@ public class SupplierFormController {
         context.getChildren().add(load);
     }
 
-    public void supplierTableOnAction(ActionEvent actionEvent) {
+    public void supplierTableOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/SupplierSelectAllForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
+    }
 
+    public void supplierOrderFormOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/SupplierOrderForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 }
