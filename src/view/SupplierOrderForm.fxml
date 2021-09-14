@@ -28,6 +28,6 @@
             <JFXButton layoutX="86.0" layoutY="512.0" onAction="#supplierOnAction" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #8c7ae6;" text="Back" textFill="WHITE" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="292.0" prefHeight="649.0" prefWidth="817.0" />
+      <AnchorPane fx:id="context" layoutX="292.0" prefHeight="649.0" prefWidth="817.0" />
    </children>
 </AnchorPane>
