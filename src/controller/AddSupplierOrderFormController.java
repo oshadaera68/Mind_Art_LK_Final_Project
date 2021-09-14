@@ -9,8 +9,10 @@ public class AddSupplierOrderFormController {
     public JFXTextField txtDate;
 
     public void addSupplierOrderOnAction(ActionEvent actionEvent) {
+
     }
 
     public void supplierOnAction(ActionEvent actionEvent) {
+
     }
 }
