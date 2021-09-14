@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="634.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierOrderFormController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="649.0" prefWidth="293.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="72.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/order.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="38.0" layoutY="211.0" text="Supplier Order Section" textFill="#161bfa">
+               <font>
+                  <Font name="Behind The Scenery" size="26.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="90.0" layoutY="294.0" onAction="#addSupplierOrderOnAction" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #3498db;" text="Add Order" textFill="WHITE" />
+            <JFXButton layoutX="90.0" layoutY="346.0" onAction="#searchSupplierOrderOnAction" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #9b59b6;" text="Search Order" textFill="WHITE" />
+            <JFXButton layoutX="88.0" layoutY="400.0" onAction="#deleteSupplierOrderOnAction" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #e74c3c;" text="Delete Order" textFill="WHITE" />
+            <JFXButton layoutX="87.0" layoutY="455.0" onAction="#selectAllSupplierOrderOnAction" style="-fx-background-color: #27ae60;" text="Select All Order" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="292.0" prefHeight="649.0" prefWidth="817.0" />
+   </children>
+</AnchorPane>
