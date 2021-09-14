@@ -28,12 +28,12 @@
          </font>
       </Label>
       <JFXTextField fx:id="txtName" layoutX="289.0" layoutY="234.0" prefHeight="31.0" prefWidth="375.0" />
-      <Label layoutX="65.0" layoutY="325.0" prefHeight="34.0" prefWidth="196.0" text="Supplier Address:">
+      <Label layoutX="65.0" layoutY="324.0" prefHeight="34.0" prefWidth="196.0" text="Supplier Address:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtAddress" layoutX="289.0" layoutY="326.0" prefHeight="31.0" prefWidth="375.0" />
+      <JFXTextField fx:id="txtAddress" layoutX="289.0" layoutY="325.0" prefHeight="31.0" prefWidth="375.0" />
       <Label layoutX="65.0" layoutY="420.0" prefHeight="34.0" prefWidth="196.0" text="Telphone No:">
          <font>
             <Font size="23.0" />
