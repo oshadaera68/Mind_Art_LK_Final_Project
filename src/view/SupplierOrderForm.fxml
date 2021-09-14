@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="634.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierOrderFormController">
+<AnchorPane fx:id="supplierContexts" prefHeight="634.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierOrderFormController">
    <children>
       <AnchorPane layoutX="-1.0" prefHeight="649.0" prefWidth="293.0" style="-fx-background-color: #bdc3c7;">
          <children>
@@ -26,6 +25,7 @@
             <JFXButton layoutX="90.0" layoutY="346.0" onAction="#searchSupplierOrderOnAction" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #9b59b6;" text="Search Order" textFill="WHITE" />
             <JFXButton layoutX="88.0" layoutY="400.0" onAction="#deleteSupplierOrderOnAction" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #e74c3c;" text="Delete Order" textFill="WHITE" />
             <JFXButton layoutX="87.0" layoutY="455.0" onAction="#selectAllSupplierOrderOnAction" style="-fx-background-color: #27ae60;" text="Select All Order" textFill="WHITE" />
+            <JFXButton layoutX="86.0" layoutY="512.0" onAction="#supplierOnAction" prefHeight="31.0" prefWidth="123.0" style="-fx-background-color: #8c7ae6;" text="Back" textFill="WHITE" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="292.0" prefHeight="649.0" prefWidth="817.0" />
