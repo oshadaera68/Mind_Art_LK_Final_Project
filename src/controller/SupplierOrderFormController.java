@@ -3,15 +3,19 @@ package controller;
 import javafx.event.ActionEvent;
 
 public class SupplierOrderFormController {
-    public void addOrderOnAction(ActionEvent actionEvent) {
+    public void addSupplierOrderOnAction(ActionEvent actionEvent) {
+
     }
 
-    public void searchOrderOnAction(ActionEvent actionEvent) {
+    public void searchSupplierOrderOnAction(ActionEvent actionEvent) {
+
     }
 
-    public void deleteOrderOnAction(ActionEvent actionEvent) {
+    public void deleteSupplierOrderOnAction(ActionEvent actionEvent) {
+
     }
 
-    public void selectAllOrderOnAction(ActionEvent actionEvent) {
+    public void selectAllSupplierOrderOnAction(ActionEvent actionEvent) {
+
     }
 }
