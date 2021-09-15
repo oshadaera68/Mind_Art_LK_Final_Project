@@ -35,8 +35,11 @@ public class SupplierOrderFormController {
         context.getChildren().add(load);
     }
 
-    public void selectAllSupplierOrderOnAction(ActionEvent actionEvent) {
-
+    public void selectAllSupplierOrderOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/SelectAllSupplierForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 
     public void supplierOnAction(ActionEvent actionEvent) throws IOException {
