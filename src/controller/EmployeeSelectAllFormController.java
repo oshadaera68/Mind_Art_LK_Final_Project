@@ -29,14 +29,14 @@ public class EmployeeSelectAllFormController {
             colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
             colTeleNo.setCellValueFactory(new PropertyValueFactory<>("teleNo"));
 
-            loadAllCustomers();
+            loadAllEmployees();
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
     }
 
-    private void loadAllCustomers() throws ClassNotFoundException, SQLException {
+    private void loadAllEmployees() throws ClassNotFoundException, SQLException {
         PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Employee");
         ResultSet rst = stm.executeQuery();
         ArrayList<Employee> employeeArrayList = new ArrayList<>();
@@ -48,10 +48,10 @@ public class EmployeeSelectAllFormController {
                     rst.getString(4)
             ));
         }
-        setCustomersToTable(employeeArrayList);
+        setEmployeesToTable(employeeArrayList);
     }
 
-    private void setCustomersToTable(ArrayList<Employee> customers) {
+    private void setEmployeesToTable(ArrayList<Employee> customers) {
         ObservableList<EmployeeTm> obList = FXCollections.observableArrayList();
         customers.forEach(e->{
             obList.add(
