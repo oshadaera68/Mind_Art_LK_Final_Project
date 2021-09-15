@@ -25,6 +25,7 @@
             <JFXButton layoutX="72.0" layoutY="344.0" onAction="#searchEmployeeOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #9b59b6;" text="Search Employee" textFill="WHITE" />
             <JFXButton layoutX="72.0" layoutY="397.0" onAction="#deleteEmployeeOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #e74c3c;" text="Delete Employee" textFill="WHITE" />
             <JFXButton layoutX="73.0" layoutY="451.0" onAction="#selectAllEmployeeOnAction" style="-fx-background-color: #27ae60;" text="Select All Employee" textFill="WHITE" />
+            <JFXButton layoutX="76.0" layoutY="508.0" onAction="#employeePaymentFormOnAction" style="-fx-background-color: #1abc9c;" text="Employee Payment" textFill="WHITE" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="context" layoutX="311.0" prefHeight="649.0" prefWidth="873.0" />

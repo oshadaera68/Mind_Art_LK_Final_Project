@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -21,7 +22,7 @@
          </image>
       </ImageView>
       <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="155.0" layoutY="188.0" promptText="username" />
-      <JFXTextField fx:id="txtPassword" labelFloat="true" layoutX="155.0" layoutY="255.0" promptText="password" />
       <JFXButton layoutX="335.0" layoutY="316.0" onAction="#dashBoardOnAction" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #9b59b6;" text="Log In" textFill="WHITE" />
+      <JFXPasswordField fx:id="txtPasswordLog" labelFloat="true" layoutX="155.0" layoutY="254.0" promptText="password" />
    </children>
 </AnchorPane>
