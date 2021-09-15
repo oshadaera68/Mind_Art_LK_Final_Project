@@ -29,7 +29,10 @@ public class SupplierDetailFormController {
 
     }
 
-    public void deleteSupplierDetailsOnAction(ActionEvent actionEvent) {
-
+    public void deleteSupplierDetailsOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/DeleteSupplierDetailForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 }
