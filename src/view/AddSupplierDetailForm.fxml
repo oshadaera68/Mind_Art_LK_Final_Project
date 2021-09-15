@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="653.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddSupplierDetailFormController">
+   <children>
+      <Label layoutX="38.0" layoutY="35.0" text="Add Supplier Detail Form" textFill="#000dff">
+         <font>
+            <Font name="Behind The Scenery" size="28.0" />
+         </font></Label>
+      <Separator layoutX="308.0" layoutY="57.0" prefHeight="0.0" prefWidth="461.0" />
+      <Label layoutX="86.0" layoutY="150.0" text="Supplier Order ID:">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSupID" layoutX="328.0" layoutY="154.0" prefHeight="31.0" prefWidth="407.0" />
+      <Label layoutX="87.0" layoutY="248.0" text="Wood Type ID:">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtWoodId" layoutX="329.0" layoutY="252.0" prefHeight="31.0" prefWidth="407.0" />
+      <Label layoutX="87.0" layoutY="349.0" text="Qty:">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtQty" layoutX="329.0" layoutY="353.0" prefHeight="31.0" prefWidth="407.0" />
+      <Label layoutX="87.0" layoutY="452.0" text="Size:">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSize" layoutX="329.0" layoutY="456.0" prefHeight="31.0" prefWidth="407.0" />
+      <JFXButton layoutX="500.0" layoutY="558.0" onAction="#addOnAction" prefHeight="31.0" prefWidth="199.0" style="-fx-background-color: #3498db;" text="Add" textFill="WHITE" />
+   </children>
+</AnchorPane>

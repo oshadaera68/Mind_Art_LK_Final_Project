@@ -27,6 +27,6 @@
             <JFXButton layoutX="55.0" layoutY="430.0" onAction="#deleteSupplierDetailsOnAction" prefHeight="31.0" prefWidth="182.0" style="-fx-background-color: #e74c3c;" text="Delete Supplier Detail" textFill="WHITE" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="context" layoutX="293.0" prefHeight="649.0" prefWidth="812.0" />
+      <AnchorPane fx:id="context" layoutX="293.0" layoutY="-1.0" prefHeight="653.0" prefWidth="812.0" />
    </children>
 </AnchorPane>
