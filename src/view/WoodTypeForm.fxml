@@ -28,5 +28,6 @@
             <JFXButton layoutX="64.0" layoutY="450.0" onAction="#selectAllWoodTypeOnAction" style="-fx-background-color: #2ecc71;" text="Select All Wood Type" textFill="WHITE" />
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="context" layoutX="293.0" prefHeight="649.0" prefWidth="817.0" />
    </children>
 </AnchorPane>
