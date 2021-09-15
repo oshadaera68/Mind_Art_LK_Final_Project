@@ -18,12 +18,18 @@ public class WoodTypeFormController {
         context.getChildren().add(load);
     }
 
-    public void searchWoodTypeOnAction(ActionEvent actionEvent) {
-
+    public void searchWoodTypeOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/SearchWoodTypeForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 
-    public void deleteWoodTypeOnAction(ActionEvent actionEvent) {
-
+    public void deleteWoodTypeOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/DeleteWoodTypeForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 
     public void selectAllWoodTypeOnAction(ActionEvent actionEvent) {

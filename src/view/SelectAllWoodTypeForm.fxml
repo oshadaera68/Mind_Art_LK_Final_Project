@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="649.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectAllWoodTypeFormController">
+   <children>
+      <Label layoutX="270.0" layoutY="30.0" text="Select All Wood Type Form">
+         <font>
+            <Font name="Behind The Scenery" size="27.0" />
+         </font>
+      </Label>
+      <Separator layoutX="62.0" layoutY="78.0" prefHeight="0.0" prefWidth="696.0" />
+      <TableView fx:id="tblWoodType" layoutX="91.0" layoutY="113.0" prefHeight="458.0" prefWidth="667.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="336.0" text="Wood Type ID" />
+          <TableColumn fx:id="colName" prefWidth="330.0" text="Wood Name" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
