@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="searchContext" prefHeight="649.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchSupplierOrderFormController">
+   <children>
+      <Label layoutX="15.0" layoutY="42.0" text="Search Supplier Order Form" textFill="#3b1cff">
+         <font>
+            <Font name="Behind The Scenery" size="27.0" />
+         </font>
+      </Label>
+      <Separator layoutX="310.0" layoutY="63.0" prefHeight="0.0" prefWidth="474.0" />
+      <Label layoutX="69.0" layoutY="157.0" text="Supplier Order ID:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtID" layoutX="326.0" layoutY="159.0" prefHeight="31.0" prefWidth="424.0" />
+      <Label layoutX="65.0" layoutY="287.0" text="Supplier Order Name:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" layoutX="326.0" layoutY="291.0" prefHeight="31.0" prefWidth="424.0" />
+      <Label layoutX="66.0" layoutY="426.0" text="Supplier Order date:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtDate" layoutX="327.0" layoutY="430.0" prefHeight="31.0" prefWidth="424.0" />
+      <JFXButton layoutX="469.0" layoutY="550.0" onAction="#searchSupplierOrderOnAction" prefHeight="31.0" prefWidth="106.0" style="-fx-background-color: #2980b9;" text="Search" textFill="WHITE" />
+      <JFXButton layoutX="618.0" layoutY="550.0" onAction="#supplierOnAction" prefHeight="31.0" prefWidth="106.0" style="-fx-background-color: #e74c3c;" text="Cancel" textFill="WHITE" />
+   </children>
+</AnchorPane>
