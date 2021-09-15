@@ -32,7 +32,10 @@ public class WoodTypeFormController {
         context.getChildren().add(load);
     }
 
-    public void selectAllWoodTypeOnAction(ActionEvent actionEvent) {
-
+    public void selectAllWoodTypeOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/SelectAllWoodTypeForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 }

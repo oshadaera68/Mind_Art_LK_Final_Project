@@ -37,7 +37,7 @@ public class EmployeeSelectAllFormController {
     }
 
     private void loadAllCustomers() throws ClassNotFoundException, SQLException {
-        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Customer");
+        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Employee");
         ResultSet rst = stm.executeQuery();
         ArrayList<Employee> employeeArrayList = new ArrayList<>();
         while (rst.next()) {

@@ -31,10 +31,8 @@ public class ItemSelectAllFormController {
 
             loadAllItems();
 
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
         }
     }
 

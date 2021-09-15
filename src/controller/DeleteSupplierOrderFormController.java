@@ -24,7 +24,7 @@ public class DeleteSupplierOrderFormController {
     public AnchorPane deleteContext;
 
     public void searchOrder(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
-        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Customer WHERE id=?");
+        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM SupplierOrder WHERE SupplierOrderID=?");
         stm.setObject(1, txtID.getText());
         ResultSet rst = stm.executeQuery();
         if (rst.next()){
@@ -47,7 +47,7 @@ public class DeleteSupplierOrderFormController {
     }
 
     boolean delete(String id) throws SQLException, ClassNotFoundException {
-        if (DbConnection.getInstance().getConnection().prepareStatement("DELETE FROM Customer WHERE id='"+id+"'").executeUpdate()>0){
+        if (DbConnection.getInstance().getConnection().prepareStatement("DELETE FROM SupplierOrder WHERE SupplierOrderID='"+id+"'").executeUpdate()>0){
             return true;
         }else{
             return false;

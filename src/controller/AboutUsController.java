@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class AboutUsController {
-    public AnchorPane aboutUsView;
 
     public void exitOnAction(ActionEvent actionEvent) throws IOException {
       Stage stage = new Stage();

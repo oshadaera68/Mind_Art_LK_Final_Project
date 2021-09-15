@@ -36,7 +36,7 @@ public class DeleteEmployeeFormController {
     }
 
     public void searchEmployee(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
-        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Customer WHERE id=?");
+        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Employee WHERE EmpId=?");
         stm.setObject(1, txtID.getText());
         ResultSet rst = stm.executeQuery();
         if (rst.next()){
@@ -60,7 +60,7 @@ public class DeleteEmployeeFormController {
     }
 
     boolean delete(String id) throws SQLException, ClassNotFoundException {
-        if (DbConnection.getInstance().getConnection().prepareStatement("DELETE FROM Customer WHERE id='"+id+"'").executeUpdate()>0){
+        if (DbConnection.getInstance().getConnection().prepareStatement("DELETE FROM Employee WHERE EmpId='"+id+"'").executeUpdate()>0){
             return true;
         }else{
             return false;

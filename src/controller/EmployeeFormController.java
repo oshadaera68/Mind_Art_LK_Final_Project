@@ -32,7 +32,10 @@ public class EmployeeFormController {
         context.getChildren().add(load);
     }
 
-    public void selectAllEmployeeOnAction(ActionEvent actionEvent) {
-
+    public void selectAllEmployeeOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/SelectAllEmployeeForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 }

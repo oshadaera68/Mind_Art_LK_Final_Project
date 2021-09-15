@@ -34,7 +34,7 @@ public class AddMachineFormController {
 
     boolean saveMachine(Machine m) throws SQLException, ClassNotFoundException {
         Connection con= DbConnection.getInstance().getConnection();
-        String query="INSERT INTO Customer VALUES(?,?,?,?)";
+        String query="INSERT INTO Machine VALUES(?,?,?,?)";
         PreparedStatement stm = con.prepareStatement(query);
         stm.setObject(1,m.getMachineID());
         stm.setObject(2,m.getMachineName());
