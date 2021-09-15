@@ -98,7 +98,7 @@
             <Font name="Segoe Print Bold" size="15.0" />
          </font>
       </Label>
-      <ImageView fitHeight="80.0" fitWidth="104.0" layoutX="378.0" layoutY="253.0" onDragDetected="#woodTypeOnAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="80.0" fitWidth="104.0" layoutX="378.0" layoutY="253.0" onMouseClicked="#woodTypeOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/wood1.jpg" />
          </image>
