@@ -1,8 +1,11 @@
 package controller;
 
 import javafx.event.ActionEvent;
+import javafx.scene.layout.AnchorPane;
 
 public class SupplierDetailFormController {
+    public AnchorPane context;
+
     public void addSupplierDetailOnAction(ActionEvent actionEvent) {
 
     }
