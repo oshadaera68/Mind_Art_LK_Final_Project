@@ -45,7 +45,7 @@ public class SupplierFormController {
     public void supplierOrderFormOnAction(ActionEvent actionEvent) throws IOException {
         URL resource = getClass().getResource("../view/SupplierOrderForm.fxml");
         Parent load = FXMLLoader.load(resource);
-        Stage window = (Stage) contexts.getScene().getWindow();
+        Stage window = (Stage) context.getScene().getWindow();
         window.setScene(new Scene(load));
         window.setTitle("Supplier Order Form");
         window.show();
@@ -54,7 +54,7 @@ public class SupplierFormController {
     public void supplierDetailsOnAction(ActionEvent actionEvent) throws IOException {
         URL resource = getClass().getResource("../view/SupplierDetailForm.fxml");
         Parent load = FXMLLoader.load(resource);
-        Stage window = (Stage) contexts.getScene().getWindow();
+        Stage window = (Stage) context.getScene().getWindow();
         window.setScene(new Scene(load));
         window.setTitle("Supplier Detail Form");
         window.show();
