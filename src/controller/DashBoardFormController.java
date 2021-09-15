@@ -91,4 +91,11 @@ public class DashBoardFormController {
         stage.setTitle("Supplier Form");
         stage.show();
     }
+
+    public void woodTypeOnAction(MouseEvent mouseEvent) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/WoodTypeForm.fxml"))));
+        stage.setTitle("Wood Type Form");
+        stage.show();
+    }
 }
