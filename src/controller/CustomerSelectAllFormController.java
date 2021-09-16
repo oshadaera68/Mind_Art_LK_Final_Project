@@ -24,17 +24,15 @@ public class CustomerSelectAllFormController {
     public void initialize() {
         try {
 
-            colId.setCellValueFactory(new PropertyValueFactory<>("id"));
-            colName.setCellValueFactory(new PropertyValueFactory<>("name"));
-            colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
-            colTeleNo.setCellValueFactory(new PropertyValueFactory<>("TeleNo"));
+            colId.setCellValueFactory(new PropertyValueFactory<>("cusID"));
+            colName.setCellValueFactory(new PropertyValueFactory<>("cusName"));
+            colAddress.setCellValueFactory(new PropertyValueFactory<>("cusAddress"));
+            colTeleNo.setCellValueFactory(new PropertyValueFactory<>("cusTelNo"));
 
             loadAllCustomers();
 
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
         }
     }
 

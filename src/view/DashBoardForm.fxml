@@ -98,7 +98,7 @@
             <Font name="Segoe Print Bold" size="15.0" />
          </font>
       </Label>
-      <ImageView fitHeight="80.0" fitWidth="104.0" layoutX="378.0" layoutY="253.0" onMouseClicked="#woodTypeOnAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="80.0" fitWidth="104.0" layoutX="380.0" layoutY="253.0" onMouseClicked="#woodTypeOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/wood1.jpg" />
          </image>
@@ -108,5 +108,15 @@
             <Font name="Segoe Print Bold" size="15.0" />
          </font>
       </Label>
+      <Label layoutX="531.0" layoutY="338.0" text="Place Order" textFill="#f25454">
+         <font>
+            <Font name="Segoe Print Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="80.0" fitWidth="91.0" layoutX="537.0" layoutY="255.0" onMouseClicked="#placeOrderOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/purchase-order-5.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
