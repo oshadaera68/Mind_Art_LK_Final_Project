@@ -57,7 +57,7 @@
       <JFXTextField labelFloat="true" layoutX="567.0" layoutY="223.0" prefHeight="31.0" prefWidth="114.0" promptText="Unit Price" />
       <Separator layoutX="691.0" layoutY="227.0" orientation="VERTICAL" prefHeight="27.0" prefWidth="4.0" />
       <JFXTextField labelFloat="true" layoutX="713.0" layoutY="222.0" prefHeight="31.0" prefWidth="99.0" promptText="Qty" />
-      <JFXButton layoutX="624.0" layoutY="276.0" prefHeight="31.0" prefWidth="72.0" text="Clear" />
+      <JFXButton layoutX="624.0" layoutY="276.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #ff6b6b;" text="Clear" textFill="WHITE" />
       <JFXButton layoutX="734.0" layoutY="276.0" style="-fx-background-color: #575fcf;" text="Add Cart" textFill="WHITE" />
    </children>
 </AnchorPane>

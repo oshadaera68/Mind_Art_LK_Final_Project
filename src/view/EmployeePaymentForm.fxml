@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="677.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeePaymentController">
+<AnchorPane fx:id="context" prefHeight="677.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeePaymentController">
    <children>
       <Label layoutX="284.0" layoutY="14.0" text="Employee Payment Form" textFill="#3e00da">
          <font>
@@ -32,6 +32,7 @@
          </font>
       </Label>
       <JFXTextField fx:id="txtAmount" layoutX="326.0" layoutY="385.0" prefHeight="31.0" prefWidth="345.0" />
-      <JFXButton layoutX="562.0" layoutY="514.0" onAction="#addPaymentOnAction" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #3498db;" text="Add Payment" textFill="WHITE" />
+      <JFXButton layoutX="437.0" layoutY="514.0" onAction="#addPaymentOnAction" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #3498db;" text="Add Payment" textFill="WHITE" />
+      <JFXButton layoutX="646.0" layoutY="514.0" onAction="#backWardOnAction" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #2ecc71;" text="Back" textFill="WHITE" />
    </children>
 </AnchorPane>
