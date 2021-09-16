@@ -34,22 +34,9 @@ public class AddCustomerFormController {
                 txtAddress.getText(),txtTelp.getText()
         );
 
-        if(saveCustomer(c1))
+        if( new CustomerController().addCustomer(c1))
             new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
         else
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
     }
-
-    boolean saveCustomer(Customer c) throws SQLException, ClassNotFoundException, SQLException {
-        Connection con= DbConnection.getInstance().getConnection();
-        String query="INSERT INTO Customer VALUES(?,?,?,?)";
-        PreparedStatement stm = con.prepareStatement(query);
-        stm.setObject(1,c.getCusID());
-        stm.setObject(2,c.getCusName());
-        stm.setObject(3,c.getCusAddress());
-        stm.setObject(4,c.getCusTelNo());
-
-        return stm.executeUpdate()>0;
-    }
 }
-

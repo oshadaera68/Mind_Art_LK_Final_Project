@@ -18,7 +18,7 @@
          </font>
       </Label>
       <Separator layoutX="82.0" layoutY="86.0" prefHeight="0.0" prefWidth="730.0" />
-      <JFXComboBox fx:id="cmbCustomerIds" layoutX="42.0" layoutY="163.0" prefHeight="31.0" prefWidth="161.0" />
+      <JFXComboBox fx:id="cmbCustomerIds" labelFloat="true" layoutX="42.0" layoutY="163.0" prefHeight="31.0" prefWidth="161.0" promptText="Customer ID" />
       <Label layoutX="65.0" layoutY="112.0" text="Order ID:">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -49,10 +49,10 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField labelFloat="true" layoutX="237.0" layoutY="164.0" prefHeight="31.0" prefWidth="190.0" promptText="Customer Name" />
-      <JFXTextField labelFloat="true" layoutX="452.0" layoutY="164.0" prefHeight="31.0" prefWidth="161.0" promptText="Customer Address" />
-      <JFXTextField labelFloat="true" layoutX="642.0" layoutY="164.0" prefHeight="31.0" prefWidth="180.0" promptText="Customer TelNo" />
-      <JFXComboBox layoutX="42.0" layoutY="226.0" prefHeight="31.0" prefWidth="161.0" />
+      <JFXTextField fx:id="txtCusName" labelFloat="true" layoutX="237.0" layoutY="164.0" prefHeight="31.0" prefWidth="190.0" promptText="Customer Name" />
+      <JFXTextField fx:id="txtCusAddress" labelFloat="true" layoutX="452.0" layoutY="164.0" prefHeight="31.0" prefWidth="161.0" promptText="Customer Address" />
+      <JFXTextField fx:id="txtCusTelNo" labelFloat="true" layoutX="642.0" layoutY="164.0" prefHeight="31.0" prefWidth="180.0" promptText="Customer TelNo" />
+      <JFXComboBox fx:id="cmbItemIds" labelFloat="true" layoutX="42.0" layoutY="226.0" prefHeight="31.0" prefWidth="161.0" promptText="Item ID" />
       <JFXTextField labelFloat="true" layoutX="239.0" layoutY="224.0" prefHeight="31.0" prefWidth="190.0" promptText="Item Name" />
       <JFXTextField labelFloat="true" layoutX="455.0" layoutY="224.0" prefHeight="31.0" prefWidth="92.0" promptText="QtyOnHand" />
       <JFXTextField labelFloat="true" layoutX="567.0" layoutY="223.0" prefHeight="31.0" prefWidth="114.0" promptText="Unit Price" />

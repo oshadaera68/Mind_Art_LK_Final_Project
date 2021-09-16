@@ -102,7 +102,7 @@ public class DashBoardFormController {
     public void placeOrderOnAction(MouseEvent mouseEvent) throws IOException {
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/OrderForm.fxml"))));
-        stage.setTitle("Wood Type Form");
+        stage.setTitle("Place Order Form");
         stage.show();
     }
 }

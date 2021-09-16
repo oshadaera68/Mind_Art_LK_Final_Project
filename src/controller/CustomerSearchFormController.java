@@ -30,22 +30,11 @@ public class CustomerSearchFormController {
     public void searchCustomerOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         String txtIdText = txtId.getText();
 
-        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Customer WHERE CusID=?");
-        stm.setObject(1, txtId.getText());
-
-        ResultSet rst = stm.executeQuery();
-
-        if (rst.next()) {
-            Customer c1= new Customer(
-                    rst.getString(1),
-                    rst.getString(2),
-                    rst.getString(3),
-                    rst.getString(4)
-            );
+        Customer c1 = new CustomerController().getCustomer(txtIdText);
+        if (c1==null) {
+            new Alert(Alert.AlertType.WARNING,"Empty Result Set").show();
+        }else{
             setData(c1);
-
-        } else {
-            new Alert(Alert.AlertType.WARNING, "Empty Result Set").show();
         }
     }
 
@@ -55,5 +44,4 @@ public class CustomerSearchFormController {
         txtAddress.setText(c.getCusAddress());
         txtTel.setText(c.getCusTelNo());
     }
-
 }

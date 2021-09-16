@@ -1,11 +1,14 @@
 package controller;
 
 import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextField;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
+import model.Customer;
 
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -17,23 +20,46 @@ public class OrderFormController {
 
     public Label lblDate;
     public Label lblTime;
-    public JFXComboBox cmbCustomerIds;
+    public JFXComboBox<String> cmbCustomerIds;
+    public JFXComboBox<String> cmbItemIds;
+    public JFXTextField txtCusName;
+    public JFXTextField txtCusAddress;
+    public JFXTextField txtCusTelNo;
 
-    public void initialize(){
+    public void initialize() {
         loadDateAndTime();
         try {
 
             loadCustomerIds();
+            loadItemIds();
 
-
-
-
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
+        cmbCustomerIds.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            try {
+                setCustomerData(newValue);
+            } catch (SQLException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    private void setCustomerData(String CustomerId) throws SQLException, ClassNotFoundException {
+        Customer c1 =new CustomerController().getCustomer(CustomerId);
+        if (c1==null){
+            new Alert(Alert.AlertType.WARNING,"Empty Result Set").show();
+        }else{
+            txtCusName.setText(c1.getCusName());
+            txtCusAddress.setText(c1.getCusAddress());
+            txtCusTelNo.setText(c1.getCusTelNo());
+        }
+    }
+
+    private void loadItemIds() throws Exception {
+        List<String> itemIds = new ItemController().getAllItemCodes();
+        cmbItemIds.getItems().addAll(itemIds);
     }
 
     private void loadCustomerIds() throws SQLException, ClassNotFoundException {
@@ -46,10 +72,10 @@ public class OrderFormController {
         SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-dd");
         lblDate.setText(format.format(date));
 
-        Timeline time = new Timeline(new KeyFrame(Duration.ZERO, e->{
+        Timeline time = new Timeline(new KeyFrame(Duration.ZERO, e -> {
             LocalTime localTime = LocalTime.now();
-                lblTime.setText(
-                    localTime.getHour()+" : "+localTime.getMinute()+" : "+ localTime.getSecond()
+            lblTime.setText(
+                    localTime.getHour() + " : " + localTime.getMinute() + " : " + localTime.getSecond()
             );
         }),
                 new KeyFrame(Duration.seconds(1))
