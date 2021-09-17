@@ -5,10 +5,18 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
 import model.Customer;
+import model.Item;
+import view.Tm.CartTm;
 
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -25,8 +33,25 @@ public class OrderFormController {
     public JFXTextField txtCusName;
     public JFXTextField txtCusAddress;
     public JFXTextField txtCusTelNo;
+    public JFXTextField txtItemName;
+    public JFXTextField txtQtyOnHand;
+    public JFXTextField txtUnitPrice;
+    public TableView<CartTm>tblCart;
+    public TableColumn colItemCode;
+    public TableColumn colItemName;
+    public TableColumn colQty;
+    public TableColumn colUnitPrice;
+    public TableColumn colTotal;
+    public JFXTextField txtQty;
+
 
     public void initialize() {
+        colItemCode.setCellValueFactory(new PropertyValueFactory<>("code"));
+        colItemName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        colUnitPrice.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
+        colTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
+
         loadDateAndTime();
         try {
 
@@ -44,6 +69,25 @@ public class OrderFormController {
                 e.printStackTrace();
             }
         });
+
+        cmbItemIds.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            try {
+                setItemData(newValue);
+            } catch (SQLException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    private void setItemData(String itemCode) throws SQLException, ClassNotFoundException {
+        Item i1 = new ItemController().getItem(itemCode);
+        if (i1==null){
+            new Alert(Alert.AlertType.WARNING,"Empty Result Set").show();
+        }else{
+            txtItemName.setText(i1.getItemName());
+            txtQtyOnHand.setText(String.valueOf(i1.getQtyOnHand()));
+            txtUnitPrice.setText(String.valueOf(i1.getUnitPrice()));
+        }
     }
 
     private void setCustomerData(String CustomerId) throws SQLException, ClassNotFoundException {
@@ -82,5 +126,30 @@ public class OrderFormController {
         );
         time.setCycleCount(Animation.INDEFINITE);
         time.play();
+    }
+
+    public void addToCartOnAction(ActionEvent actionEvent) {
+        String itemName = txtItemName.getText();
+        int qtyOnHand = Integer.parseInt(txtQtyOnHand.getText());
+        double price = Double.parseDouble(txtUnitPrice.getText());
+        int qty = Integer.parseInt(txtQty.getText());
+        double total = qty*price;
+
+        if (qtyOnHand<qty){
+            new Alert(Alert.AlertType.WARNING,"Invalid QTY").show();
+            return;
+        }
+
+        ObservableList<CartTm> obList = FXCollections.observableArrayList();
+
+        CartTm cartTm = new CartTm(
+                cmbItemIds.getValue(),
+                itemName,
+                qty,
+                price,
+                total
+        );
+        obList.add(cartTm);
+        tblCart.setItems(obList);
     }
 }

@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Item {
     private String ItemCode;
     private String ItemName;
@@ -46,5 +48,18 @@ public class Item {
 
     public void setUnitPrice(double unitPrice) {
         UnitPrice = unitPrice;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Item item = (Item) o;
+        return Objects.equals(ItemCode, item.ItemCode);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ItemCode);
     }
 }

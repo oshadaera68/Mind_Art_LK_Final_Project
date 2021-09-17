@@ -20,13 +20,12 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtId" layoutX="273.0" layoutY="144.0" prefHeight="31.0" prefWidth="375.0" />
       <Label layoutX="51.0" layoutY="222.0" prefHeight="34.0" prefWidth="180.0" text="Customer Name:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtName" layoutX="273.0" layoutY="224.0" prefHeight="31.0" prefWidth="375.0" />
+      <JFXTextField fx:id="txtId" layoutX="273.0" layoutY="145.0" onKeyPressed="#setOnAction" prefHeight="31.0" prefWidth="375.0" />
       <Label layoutX="49.0" layoutY="305.0" prefHeight="34.0" prefWidth="196.0" text="Customer Address:">
          <font>
             <Font size="23.0" />
@@ -41,5 +40,6 @@
       <JFXTextField fx:id="txtTelp" layoutX="273.0" layoutY="396.0" prefHeight="31.0" prefWidth="375.0" />
       <JFXButton layoutX="500.0" layoutY="586.0" onAction="#addCustomerOnAction" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #0984e3;" text="OK" textFill="WHITE" />
       <JFXButton layoutX="660.0" layoutY="586.0" onAction="#dashBoardOnAction" prefHeight="31.0" prefWidth="117.0" style="-fx-background-color: #d63031;" text="Cancel" textFill="WHITE" />
+      <JFXTextField fx:id="txtName" layoutX="273.0" layoutY="224.0" prefHeight="31.0" prefWidth="375.0" />
    </children>
 </AnchorPane>

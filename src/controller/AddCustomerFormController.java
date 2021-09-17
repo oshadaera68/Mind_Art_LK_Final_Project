@@ -6,6 +6,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import model.Customer;
 
@@ -13,6 +15,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.regex.Pattern;
 
 public class AddCustomerFormController {
 
@@ -20,6 +23,11 @@ public class AddCustomerFormController {
     public JFXTextField txtName;
     public JFXTextField txtAddress;
     public JFXTextField txtTelp;
+
+
+    public void initialize(){
+
+    }
 
     public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
@@ -34,9 +42,10 @@ public class AddCustomerFormController {
                 txtAddress.getText(),txtTelp.getText()
         );
 
-        if( new CustomerController().addCustomer(c1))
+        if(new CustomerController().addCustomer(c1))
             new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
         else
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
     }
+    
 }

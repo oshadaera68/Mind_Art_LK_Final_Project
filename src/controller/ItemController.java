@@ -1,6 +1,7 @@
 package controller;
 
 import db.DbConnection;
+import model.Item;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,6 +17,20 @@ public class ItemController {
             ids.add(rst.getString(1));
         }
         return ids;
+    }
+
+    public Item getItem(String id) throws SQLException, ClassNotFoundException {
+        ResultSet rst = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Item WHERE ItemCode='" + id + "'").executeQuery();
+        if (rst.next()){
+            return new Item(
+                    rst.getString(1),
+                    rst.getString(2),
+                    rst.getInt(3),
+                    rst.getInt(4)
+            );
+        }else{
+            return null;
+        }
     }
 
 }

@@ -10,14 +10,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="614.0" prefWidth="843.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderFormController">
+<AnchorPane prefHeight="624.0" prefWidth="843.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderFormController">
    <children>
-      <Label layoutX="336.0" layoutY="34.0" prefHeight="40.0" prefWidth="172.0" text="Place Order Form" textFill="#005ff8">
+      <Label layoutX="296.0" layoutY="21.0" prefHeight="54.0" prefWidth="233.0" text="Place Order Form" textFill="#005ff8">
          <font>
-            <Font name="Behind The Scenery" size="26.0" />
+            <Font name="Behind The Scenery" size="35.0" />
          </font>
       </Label>
-      <Separator layoutX="82.0" layoutY="86.0" prefHeight="0.0" prefWidth="730.0" />
+      <Separator layoutX="18.0" layoutY="86.0" prefHeight="3.0" prefWidth="794.0" />
       <JFXComboBox fx:id="cmbCustomerIds" labelFloat="true" layoutX="42.0" layoutY="163.0" prefHeight="31.0" prefWidth="161.0" promptText="Customer ID" />
       <Label layoutX="65.0" layoutY="112.0" text="Order ID:">
          <font>
@@ -53,13 +53,13 @@
       <JFXTextField fx:id="txtCusAddress" labelFloat="true" layoutX="452.0" layoutY="164.0" prefHeight="31.0" prefWidth="161.0" promptText="Customer Address" />
       <JFXTextField fx:id="txtCusTelNo" labelFloat="true" layoutX="642.0" layoutY="164.0" prefHeight="31.0" prefWidth="180.0" promptText="Customer TelNo" />
       <JFXComboBox fx:id="cmbItemIds" labelFloat="true" layoutX="42.0" layoutY="226.0" prefHeight="31.0" prefWidth="161.0" promptText="Item ID" />
-      <JFXTextField labelFloat="true" layoutX="239.0" layoutY="224.0" prefHeight="31.0" prefWidth="190.0" promptText="Item Name" />
-      <JFXTextField labelFloat="true" layoutX="455.0" layoutY="224.0" prefHeight="31.0" prefWidth="92.0" promptText="QtyOnHand" />
-      <JFXTextField labelFloat="true" layoutX="567.0" layoutY="223.0" prefHeight="31.0" prefWidth="114.0" promptText="Unit Price" />
+      <JFXTextField fx:id="txtItemName" labelFloat="true" layoutX="239.0" layoutY="224.0" prefHeight="31.0" prefWidth="190.0" promptText="Item Name" />
+      <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="455.0" layoutY="224.0" prefHeight="31.0" prefWidth="92.0" promptText="QtyOnHand" />
+      <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="567.0" layoutY="223.0" prefHeight="31.0" prefWidth="114.0" promptText="Unit Price" />
       <Separator layoutX="691.0" layoutY="227.0" orientation="VERTICAL" prefHeight="27.0" prefWidth="4.0" />
-      <JFXTextField labelFloat="true" layoutX="713.0" layoutY="222.0" prefHeight="31.0" prefWidth="99.0" promptText="Qty" />
+      <JFXTextField fx:id="txtQty" labelFloat="true" layoutX="713.0" layoutY="222.0" prefHeight="31.0" prefWidth="99.0" promptText="Qty" />
       <JFXButton layoutX="529.0" layoutY="276.0" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #ff6b6b;" text="Clear" textFill="WHITE" />
-      <JFXButton layoutX="691.0" layoutY="276.0" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #575fcf;" text="Add Cart" textFill="WHITE" />
+      <JFXButton layoutX="691.0" layoutY="276.0" onAction="#addToCartOnAction" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #575fcf;" text="Add Cart" textFill="WHITE" />
       <JFXButton layoutX="725.0" layoutY="570.0" style="-fx-background-color: #575fcf;" text="Place Order" textFill="WHITE" />
       <Label layoutX="28.0" layoutY="571.0" text="Total:" textFill="#f80000">
          <font>
@@ -71,13 +71,13 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TableView layoutX="28.0" layoutY="342.0" prefHeight="200.0" prefWidth="794.0">
+      <TableView fx:id="tblCart" layoutX="28.0" layoutY="342.0" prefHeight="200.0" prefWidth="794.0">
         <columns>
-          <TableColumn prefWidth="119.0" text="Item Code" />
-          <TableColumn prefWidth="156.0" text="Item Name" />
-            <TableColumn prefWidth="156.0" text="Qty" />
-            <TableColumn prefWidth="156.0" text="Unit Price" />
-            <TableColumn prefWidth="206.0" text="Total" />
+          <TableColumn fx:id="colItemCode" prefWidth="119.0" text="Item Code" />
+          <TableColumn fx:id="colItemName" prefWidth="156.0" text="Item Name" />
+            <TableColumn fx:id="colQty" prefWidth="156.0" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="156.0" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="206.0" text="Total" />
         </columns>
       </TableView>
       <Separator layoutX="28.0" layoutY="319.0" prefHeight="3.0" prefWidth="794.0" />
