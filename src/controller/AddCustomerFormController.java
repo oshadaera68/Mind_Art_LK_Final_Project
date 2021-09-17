@@ -24,11 +24,6 @@ public class AddCustomerFormController {
     public JFXTextField txtAddress;
     public JFXTextField txtTelp;
 
-
-    public void initialize(){
-
-    }
-
     public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/DashBoardForm.fxml"))));
@@ -38,8 +33,7 @@ public class AddCustomerFormController {
 
     public void addCustomerOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         Customer c1 = new Customer(
-                txtId.getText(),txtName.getText(),
-                txtAddress.getText(),txtTelp.getText()
+                txtId.getText(),txtName.getText(),txtAddress.getText(),txtTelp.getText()
         );
 
         if(new CustomerController().addCustomer(c1))
@@ -47,5 +41,4 @@ public class AddCustomerFormController {
         else
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
     }
-    
 }

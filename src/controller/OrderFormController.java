@@ -221,5 +221,10 @@ public class OrderFormController {
         Order order = new Order("O-001",cmbCustomerIds.getValue(),lblDate.getText(),lblTime.getText(),ttl,itemDetails
 
         );
+        if (new OrderController().placeOrder(order)){
+            new Alert(Alert.AlertType.CONFIRMATION,"Success").show();
+        }else {
+            new Alert(Alert.AlertType.WARNING, "Try Again").show();
+        }
     }
 }
