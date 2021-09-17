@@ -58,15 +58,15 @@
       <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="567.0" layoutY="223.0" prefHeight="31.0" prefWidth="114.0" promptText="Unit Price" />
       <Separator layoutX="691.0" layoutY="227.0" orientation="VERTICAL" prefHeight="27.0" prefWidth="4.0" />
       <JFXTextField fx:id="txtQty" labelFloat="true" layoutX="713.0" layoutY="222.0" prefHeight="31.0" prefWidth="99.0" promptText="Qty" />
-      <JFXButton layoutX="529.0" layoutY="276.0" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #ff6b6b;" text="Clear" textFill="WHITE" />
+      <JFXButton layoutX="529.0" layoutY="276.0" onAction="#clearOnAction" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #ff6b6b;" text="Clear" textFill="WHITE" />
       <JFXButton layoutX="691.0" layoutY="276.0" onAction="#addToCartOnAction" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #575fcf;" text="Add Cart" textFill="WHITE" />
-      <JFXButton layoutX="725.0" layoutY="570.0" style="-fx-background-color: #575fcf;" text="Place Order" textFill="WHITE" />
+      <JFXButton layoutX="725.0" layoutY="570.0" onAction="#placeOrderOnAction" style="-fx-background-color: #575fcf;" text="Place Order" textFill="WHITE" />
       <Label layoutX="28.0" layoutY="571.0" text="Total:" textFill="#f80000">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="82.0" layoutY="572.0" text="0.00" textFill="#f80000">
+      <Label fx:id="txtTtl" layoutX="82.0" layoutY="572.0" text="0.00" textFill="#f80000">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

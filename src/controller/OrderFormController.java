@@ -16,11 +16,14 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
 import model.Customer;
 import model.Item;
+import model.ItemDetails;
+import model.Order;
 import view.Tm.CartTm;
 
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -36,14 +39,16 @@ public class OrderFormController {
     public JFXTextField txtItemName;
     public JFXTextField txtQtyOnHand;
     public JFXTextField txtUnitPrice;
-    public TableView<CartTm>tblCart;
+    public TableView<CartTm> tblCart;
     public TableColumn colItemCode;
     public TableColumn colItemName;
     public TableColumn colQty;
     public TableColumn colUnitPrice;
     public TableColumn colTotal;
     public JFXTextField txtQty;
+    public Label txtTtl;
 
+    int cartSelectedRowForRemove = -1;
 
     public void initialize() {
         colItemCode.setCellValueFactory(new PropertyValueFactory<>("code"));
@@ -77,13 +82,17 @@ public class OrderFormController {
                 e.printStackTrace();
             }
         });
+
+        tblCart.getSelectionModel().selectedIndexProperty().addListener((observable, oldValue, newValue) -> {
+            cartSelectedRowForRemove = (int) newValue;
+        });
     }
 
     private void setItemData(String itemCode) throws SQLException, ClassNotFoundException {
         Item i1 = new ItemController().getItem(itemCode);
-        if (i1==null){
-            new Alert(Alert.AlertType.WARNING,"Empty Result Set").show();
-        }else{
+        if (i1 == null) {
+            new Alert(Alert.AlertType.WARNING, "Empty Result Set").show();
+        } else {
             txtItemName.setText(i1.getItemName());
             txtQtyOnHand.setText(String.valueOf(i1.getQtyOnHand()));
             txtUnitPrice.setText(String.valueOf(i1.getUnitPrice()));
@@ -91,10 +100,10 @@ public class OrderFormController {
     }
 
     private void setCustomerData(String CustomerId) throws SQLException, ClassNotFoundException {
-        Customer c1 =new CustomerController().getCustomer(CustomerId);
-        if (c1==null){
-            new Alert(Alert.AlertType.WARNING,"Empty Result Set").show();
-        }else{
+        Customer c1 = new CustomerController().getCustomer(CustomerId);
+        if (c1 == null) {
+            new Alert(Alert.AlertType.WARNING, "Empty Result Set").show();
+        } else {
             txtCusName.setText(c1.getCusName());
             txtCusAddress.setText(c1.getCusAddress());
             txtCusTelNo.setText(c1.getCusTelNo());
@@ -128,19 +137,19 @@ public class OrderFormController {
         time.play();
     }
 
+    ObservableList<CartTm> observableList = FXCollections.observableArrayList();
+
     public void addToCartOnAction(ActionEvent actionEvent) {
         String itemName = txtItemName.getText();
         int qtyOnHand = Integer.parseInt(txtQtyOnHand.getText());
         double price = Double.parseDouble(txtUnitPrice.getText());
         int qty = Integer.parseInt(txtQty.getText());
-        double total = qty*price;
+        double total = qty * price;
 
-        if (qtyOnHand<qty){
-            new Alert(Alert.AlertType.WARNING,"Invalid QTY").show();
+        if (qtyOnHand < qty) {
+            new Alert(Alert.AlertType.WARNING, "Invalid QTY").show();
             return;
         }
-
-        ObservableList<CartTm> obList = FXCollections.observableArrayList();
 
         CartTm cartTm = new CartTm(
                 cmbItemIds.getValue(),
@@ -149,7 +158,68 @@ public class OrderFormController {
                 price,
                 total
         );
-        obList.add(cartTm);
-        tblCart.setItems(obList);
+
+        int rowNumber = isExists(cartTm);
+        if (rowNumber == -1) {
+            observableList.add(cartTm);
+        } else {
+            CartTm temp = observableList.get(rowNumber);
+            CartTm newTm = new CartTm(
+                    temp.getCode(),
+                    temp.getName(),
+                    temp.getQty() + qtyOnHand,
+                    price,
+                    total + temp.getTotal()
+            );
+            if (qtyOnHand < temp.getQty()) {
+                new Alert(Alert.AlertType.WARNING, "Invalid QTY").show();
+                return;
+            }
+
+            observableList.remove(rowNumber);
+            observableList.add(newTm);
+        }
+
+        tblCart.setItems(observableList);
+        CalculateCost();
+    }
+
+    private int isExists(CartTm tm) {
+        for (int i = 0; i < observableList.size(); i++) {
+            if (tm.getCode().equals(observableList.get(i).getCode())) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    void CalculateCost() {
+        double ttl = 0;
+        for (CartTm tm : observableList) {
+            ttl += tm.getTotal();
+        }
+        txtTtl.setText(ttl + "/=");
+    }
+
+    public void clearOnAction(ActionEvent actionEvent) {
+        if (cartSelectedRowForRemove == -1) {
+            new Alert(Alert.AlertType.WARNING, "please select a row").show();
+        } else {
+            new Alert(Alert.AlertType.CONFIRMATION, "Cleared Data in row").show();
+            observableList.remove(cartSelectedRowForRemove);
+            tblCart.refresh();
+        }
+    }
+
+    public void placeOrderOnAction(ActionEvent actionEvent) {
+        ArrayList<ItemDetails> itemDetails = new ArrayList<>();
+        double ttl=0;
+        for (CartTm tempTm : observableList) {
+            ttl+=tempTm.getTotal();
+            itemDetails.add(new ItemDetails(tempTm.getCode(),tempTm.getUnitPrice(), tempTm.getQty()));
+        }
+        Order order = new Order("O-001",cmbCustomerIds.getValue(),lblDate.getText(),lblTime.getText(),ttl,itemDetails
+
+        );
     }
 }
