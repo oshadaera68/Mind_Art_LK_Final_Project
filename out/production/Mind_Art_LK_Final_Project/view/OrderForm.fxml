@@ -24,7 +24,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="155.0" layoutY="112.0" text="O001">
+      <Label fx:id="lblOrderId" layoutX="155.0" layoutY="112.0" text="O001">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

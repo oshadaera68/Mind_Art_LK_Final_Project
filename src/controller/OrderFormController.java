@@ -47,6 +47,7 @@ public class OrderFormController {
     public TableColumn colTotal;
     public JFXTextField txtQty;
     public Label txtTtl;
+    public Label lblOrderId;
 
     int cartSelectedRowForRemove = -1;
 
@@ -58,6 +59,7 @@ public class OrderFormController {
         colTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
 
         loadDateAndTime();
+        setOrderId();
         try {
 
             loadCustomerIds();
@@ -86,6 +88,14 @@ public class OrderFormController {
         tblCart.getSelectionModel().selectedIndexProperty().addListener((observable, oldValue, newValue) -> {
             cartSelectedRowForRemove = (int) newValue;
         });
+    }
+
+    private void setOrderId() {
+        try {
+            lblOrderId.setText(new OrderController().getOrderId());
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     private void setItemData(String itemCode) throws SQLException, ClassNotFoundException {
@@ -218,11 +228,12 @@ public class OrderFormController {
             ttl+=tempTm.getTotal();
             itemDetails.add(new ItemDetails(tempTm.getCode(),tempTm.getUnitPrice(), tempTm.getQty()));
         }
-        Order order = new Order("O-001",cmbCustomerIds.getValue(),lblDate.getText(),lblTime.getText(),ttl,itemDetails
+        Order order = new Order(lblOrderId.getText(),cmbCustomerIds.getValue(),lblDate.getText(),lblTime.getText(),ttl,itemDetails
 
         );
         if (new OrderController().placeOrder(order)){
             new Alert(Alert.AlertType.CONFIRMATION,"Success").show();
+            setOrderId();
         }else {
             new Alert(Alert.AlertType.WARNING, "Try Again").show();
         }

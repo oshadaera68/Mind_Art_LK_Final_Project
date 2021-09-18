@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="462.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+<AnchorPane prefHeight="462.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
    <children>
       <Label layoutX="70.0" layoutY="200.0" prefHeight="28.0" prefWidth="76.0" text="Customer" textFill="#f54949">
          <font>
             <Font name="Segoe Print Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="195.0" layoutY="30.0" text="Timber Mill Management System" textFill="#4e3bd9">
+      <Label layoutX="201.0" layoutY="30.0" text="Timber Mill Management System" textFill="#4e3bd9">
          <font>
             <Font name="Consolas Bold" size="23.0" />
          </font>
@@ -118,5 +118,15 @@
             <Image url="@../asserts/purchase-order-5.png" />
          </image>
       </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="100.0" layoutX="672.0" layoutY="117.0" onMouseClicked="#expenseOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/paper-expense-report-icon-outline-style-vector-web-design-isolated-white-background-182917076.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="684.0" layoutY="203.0" text="Expense" textFill="#f54949">
+         <font>
+            <Font name="Segoe Print Bold" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -19,7 +19,7 @@ public class DashBoardFormController {
     public Label lblDate;
     public Label lblTime;
 
-    public void initialize(){
+    public void initialize() {
         loadDate();
         loadTime();
     }
@@ -31,10 +31,10 @@ public class DashBoardFormController {
     }
 
     private void loadTime() {
-        Timeline time = new Timeline(new KeyFrame(Duration.ZERO,e->{
+        Timeline time = new Timeline(new KeyFrame(Duration.ZERO, e -> {
             LocalTime localTime = LocalTime.now();
             lblTime.setText(
-                    localTime.getHour()+" : "+localTime.getMinute()+" : "+ localTime.getSecond()
+                    localTime.getHour() + " : " + localTime.getMinute() + " : " + localTime.getSecond()
             );
         }),
                 new KeyFrame(Duration.seconds(1))
@@ -103,6 +103,13 @@ public class DashBoardFormController {
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/OrderForm.fxml"))));
         stage.setTitle("Place Order Form");
+        stage.show();
+    }
+
+    public void expenseOnAction(MouseEvent mouseEvent) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/ExpenseForm.fxml"))));
+        stage.setTitle("Expense Form");
         stage.show();
     }
 }

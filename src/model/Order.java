@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Order {
    private String OrderID;
-   private String customerId;
+   private String customerID;
    private String Date;
    private String Time;
    private double cost;
@@ -15,7 +15,7 @@ public class Order {
 
    public Order(String orderID, String customerId, String date, String time, double cost, ArrayList<ItemDetails> details) {
       this.OrderID = orderID;
-      this.customerId = customerId;
+      this.customerID = customerId;
       this.Date = date;
       this.Time = time;
       this.cost = cost;
@@ -31,11 +31,11 @@ public class Order {
    }
 
    public String getCustomerId() {
-      return customerId;
+      return customerID;
    }
 
    public void setCustomerId(String customerId) {
-      this.customerId = customerId;
+      this.customerID = customerId;
    }
 
    public String getDate() {
@@ -74,7 +74,7 @@ public class Order {
    public String toString() {
       return "Order{" +
               "OrderID='" + OrderID + '\'' +
-              ", customerId='" + customerId + '\'' +
+              ", customerId='" + customerID + '\'' +
               ", Date='" + Date + '\'' +
               ", Time='" + Time + '\'' +
               ", cost=" + cost +
