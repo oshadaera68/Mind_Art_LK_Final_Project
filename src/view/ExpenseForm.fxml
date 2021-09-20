@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.ExpenseFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="634.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ExpenseFormController">
+   <children>
+      <AnchorPane prefHeight="649.0" prefWidth="293.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="72.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/paper-expense-report-icon-outline-style-vector-web-design-isolated-white-background-182917076.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="50.0" layoutY="198.0" text="Expense section" textFill="#262dff">
+               <font>
+                  <Font name="Behind The Scenery" size="37.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="74.0" layoutY="294.0" onAction="#addExpenseOnAction" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: #3498db;" text="Add Expense" textFill="WHITE" />
+            <JFXButton layoutX="75.0" layoutY="356.0" onAction="#searchExpenseOnAction" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: #2ecc71;" text="Search Expense" textFill="WHITE" />
+            <JFXButton layoutX="73.0" layoutY="415.0" onAction="#deleteExpenseOnAction" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: #e74c3c;" text="Delete Expense" textFill="WHITE" />
+            <JFXButton layoutX="76.0" layoutY="484.0" onAction="#selectAllExpenseOnAction" style="-fx-background-color: #e67e22;" text="Select All Expense" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="293.0" prefHeight="649.0" prefWidth="809.0" />
+   </children>
 </AnchorPane>

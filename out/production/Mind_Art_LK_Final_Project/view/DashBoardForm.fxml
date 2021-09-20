@@ -118,15 +118,15 @@
             <Image url="@../asserts/purchase-order-5.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="100.0" layoutX="672.0" layoutY="117.0" onMouseClicked="#expenseOnAction" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/paper-expense-report-icon-outline-style-vector-web-design-isolated-white-background-182917076.jpg" />
-         </image>
-      </ImageView>
       <Label layoutX="684.0" layoutY="203.0" text="Expense" textFill="#f54949">
          <font>
             <Font name="Segoe Print Bold" size="15.0" />
          </font>
       </Label>
+      <ImageView fitHeight="74.0" fitWidth="80.0" layoutX="674.0" layoutY="127.0" onMouseClicked="#expenseOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/paper-expense-report-icon-outline-style-vector-web-design-isolated-white-background-182917076.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
