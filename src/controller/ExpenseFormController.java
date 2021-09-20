@@ -1,8 +1,11 @@
 package controller;
 
 import javafx.event.ActionEvent;
+import javafx.scene.layout.AnchorPane;
 
 public class ExpenseFormController {
+    public AnchorPane context;
+
     public void addExpenseOnAction(ActionEvent actionEvent) {
 
     }
@@ -17,5 +20,8 @@ public class ExpenseFormController {
 
     public void selectAllExpenseOnAction(ActionEvent actionEvent) {
 
+    }
+
+    public void addOnAction(ActionEvent actionEvent) {
     }
 }

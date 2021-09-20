@@ -27,6 +27,6 @@
             <JFXButton layoutX="76.0" layoutY="484.0" onAction="#selectAllExpenseOnAction" style="-fx-background-color: #e67e22;" text="Select All Expense" textFill="WHITE" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="293.0" prefHeight="649.0" prefWidth="809.0" />
+      <AnchorPane fx:id="context" layoutX="293.0" prefHeight="649.0" prefWidth="809.0" />
    </children>
 </AnchorPane>
