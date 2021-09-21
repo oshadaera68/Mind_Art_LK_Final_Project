@@ -1,0 +1,9 @@
+
+M
+java:S1172"2Remove this unused method parameter "actionEvent".(¾¾“šüÿÿÿÿ
+o
+java:S1104"YMake txtWoodTypeID a static final constant or non-public and provide accessors if needed.(Ï‹§ö
+m
+java:S1104"WMake txtWoodName a static final constant or non-public and provide accessors if needed.(ìèÊı
+e
+java:S2095 "OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ò€§

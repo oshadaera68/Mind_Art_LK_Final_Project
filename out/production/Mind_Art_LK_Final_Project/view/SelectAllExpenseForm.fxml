@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="649.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectAllExpenseFormController">
+   <children>
+      <Label layoutX="278.0" layoutY="34.0" text="Expense Select All Form">
+         <font>
+            <Font name="Behind The Scenery" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblExpense" layoutX="50.0" layoutY="116.0" prefHeight="479.0" prefWidth="696.0">
+        <columns>
+          <TableColumn fx:id="colExpenseId" prefWidth="208.0" text="Expense ID" />
+          <TableColumn fx:id="colExpenseType" minWidth="0.0" prefWidth="250.0" text="Expense Type" />
+            <TableColumn fx:id="colExpenseAmount" prefWidth="237.0" text="Expense Amount" />
+        </columns>
+      </TableView>
+      <Separator layoutX="28.0" layoutY="83.0" prefHeight="4.0" prefWidth="757.0" />
+   </children>
+</AnchorPane>
