@@ -1,132 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="462.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+
+<AnchorPane prefHeight="746.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
    <children>
-      <Label layoutX="70.0" layoutY="200.0" prefHeight="28.0" prefWidth="76.0" text="Customer" textFill="#f54949">
+      <Label layoutX="32.0" layoutY="26.0" text="DashBoard" textFill="#1b45fa">
          <font>
-            <Font name="Segoe Print Bold" size="15.0" />
+            <Font name="Behind The Scenery" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="201.0" layoutY="30.0" text="Timber Mill Management System" textFill="#4e3bd9">
-         <font>
-            <Font name="Consolas Bold" size="23.0" />
-         </font>
-      </Label>
-      <Label layoutX="706.0" layoutY="430.0" onMouseClicked="#AboutUsOnAction" text="About Us" textFill="#111111">
-         <font>
-            <Font name="Consolas" size="15.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="74.0" fitWidth="108.0" layoutX="67.0" layoutY="120.0" onMouseClicked="#CustomerFormOnAction" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/guest-male.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="74.0" fitWidth="108.0" layoutX="235.0" layoutY="120.0" onMouseClicked="#machineryOnAction" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/icons8-grinding-machine-48.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="232.0" layoutY="199.0" text="Machinery" textFill="#f54949">
-         <font>
-            <Font name="Segoe Print Bold" size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="24.0" layoutY="425.0" text="Date:">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblDate" layoutX="66.0" layoutY="426.0" text="2021/09/13">
-         <font>
-            <Font name="Comic Sans MS Bold" size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="172.0" layoutY="427.0" text="Time:">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblTime" layoutX="216.0" layoutY="427.0" text="10:51:12">
-         <font>
-            <Font name="Comic Sans MS Bold" size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="77.0" layoutY="338.0" text="Report" textFill="#f25454">
-         <font>
-            <Font name="Segoe Print Bold" size="15.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="80.0" fitWidth="93.0" layoutX="63.0" layoutY="253.0" onMouseClicked="#reportOnAction" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/download.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="99.0" layoutX="379.0" layoutY="117.0" onMouseClicked="#itemOnAction" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/1234.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="400.0" layoutY="200.0" text="Item" textFill="#f54949">
-         <font>
-            <Font name="Segoe Print Bold" size="15.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="74.0" fitWidth="89.0" layoutX="535.0" layoutY="120.0" onMouseClicked="#ServantOnAction" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/servent.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="536.0" layoutY="203.0" text="Employee" textFill="#f54949">
-         <font>
-            <Font name="Segoe Print Bold" size="15.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="74.0" fitWidth="89.0" layoutX="227.0" layoutY="253.0" onMouseClicked="#supplierOnAction" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/supplier.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="235.0" layoutY="338.0" text="Supplier" textFill="#f25454">
-         <font>
-            <Font name="Segoe Print Bold" size="15.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="80.0" fitWidth="104.0" layoutX="380.0" layoutY="253.0" onMouseClicked="#woodTypeOnAction" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/wood1.jpg" />
-         </image>
-      </ImageView>
-      <Label layoutX="374.0" layoutY="338.0" text="Wood Types" textFill="#f25454">
-         <font>
-            <Font name="Segoe Print Bold" size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="531.0" layoutY="338.0" text="Place Order" textFill="#f25454">
-         <font>
-            <Font name="Segoe Print Bold" size="15.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="80.0" fitWidth="91.0" layoutX="537.0" layoutY="255.0" onMouseClicked="#placeOrderOnAction" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/purchase-order-5.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="684.0" layoutY="203.0" text="Expense" textFill="#f54949">
-         <font>
-            <Font name="Segoe Print Bold" size="15.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="74.0" fitWidth="80.0" layoutX="674.0" layoutY="127.0" onMouseClicked="#expenseOnAction" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/paper-expense-report-icon-outline-style-vector-web-design-isolated-white-background-182917076.jpg" />
-         </image>
-      </ImageView>
+      <Separator layoutX="199.0" layoutY="58.0" prefHeight="0.0" prefWidth="748.0" />
    </children>
 </AnchorPane>

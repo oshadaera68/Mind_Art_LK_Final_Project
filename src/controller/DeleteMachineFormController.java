@@ -30,7 +30,7 @@ public class DeleteMachineFormController {
 
     public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/DashBoardForm.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/MainForm.fxml"))));
         stage.setTitle("Timber Mill Management System - Ver 0.1.0");
         stage.show();
     }

@@ -23,7 +23,7 @@ public class LogInFormController {
         String user = txtUserName.getText();
         String pass = txtPasswordLog.getText();
         if (user.equals("admin") && pass.equals("1234")) {
-            URL resource = getClass().getResource("../view/DashBoardForm.fxml");
+            URL resource = getClass().getResource("../view/MainForm.fxml");
             Parent load = FXMLLoader.load(resource);
             Stage window = (Stage) logInContext.getScene().getWindow();
             window.setScene(new Scene(load));

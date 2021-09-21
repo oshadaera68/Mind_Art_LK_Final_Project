@@ -1,21 +1,15 @@
 package controller;
 
 import com.jfoenix.controls.JFXTextField;
-import db.DbConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import model.Customer;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.regex.Pattern;
 
 public class AddCustomerFormController {
 
@@ -26,7 +20,7 @@ public class AddCustomerFormController {
 
     public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/DashBoardForm.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/MainForm.fxml"))));
         stage.setTitle("Timber Mill Management System - Ver 0.1.0");
         stage.show();
     }

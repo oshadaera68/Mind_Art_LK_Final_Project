@@ -58,4 +58,13 @@ public class SupplierFormController {
         window.setTitle("Supplier Detail Form");
         window.show();
     }
+
+    public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/MainForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Stage window = (Stage) contexts.getScene().getWindow();
+        window.setScene(new Scene(load));
+        window.setTitle("Supplier Detail Form");
+        window.show();
+    }
 }

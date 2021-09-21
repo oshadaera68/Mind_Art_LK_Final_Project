@@ -24,7 +24,7 @@ public class SupplierSelectAllFormController {
     public void initialize() {
         try {
 
-            colSupplierID.setCellValueFactory(new PropertyValueFactory<>("supplierId"));
+            colSupplierID.setCellValueFactory(new PropertyValueFactory<>("supplierID"));
             colSupplierName.setCellValueFactory(new PropertyValueFactory<>("supplierName"));
             colSupplierAddress.setCellValueFactory(new PropertyValueFactory<>("supplierAddress"));
             colTelNo.setCellValueFactory(new PropertyValueFactory<>("telNo"));

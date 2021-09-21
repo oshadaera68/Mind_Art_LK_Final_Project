@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="634.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierDetailFormController">
+<AnchorPane fx:id="supplierContexts" prefHeight="634.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierDetailFormController">
    <children>
       <AnchorPane layoutY="-6.0" prefHeight="659.0" prefWidth="293.0" style="-fx-background-color: #bdc3c7;">
          <children>
@@ -25,6 +25,7 @@
             <JFXButton layoutX="57.0" layoutY="369.0" onAction="#searchSupplierDetailOnAction" prefHeight="31.0" prefWidth="182.0" style="-fx-background-color: #9b59b6;" text="Search Supplier Detail" textFill="WHITE" />
             <JFXButton layoutX="54.0" layoutY="494.0" onAction="#selectAllFormOnAction" style="-fx-background-color: #2ecc71;" text="Select All Supplier Detail" textFill="WHITE" />
             <JFXButton layoutX="55.0" layoutY="430.0" onAction="#deleteSupplierDetailsOnAction" prefHeight="31.0" prefWidth="182.0" style="-fx-background-color: #e74c3c;" text="Delete Supplier Detail" textFill="WHITE" />
+            <JFXButton layoutX="105.0" layoutY="556.0" onAction="#backStageOnAction" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: #3498db;" text="Back" textFill="WHITE" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="context" layoutX="293.0" layoutY="-1.0" prefHeight="653.0" prefWidth="812.0" />

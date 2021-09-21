@@ -1,7 +1,6 @@
 package controller;
 
 import com.jfoenix.controls.JFXTextField;
-import db.DbConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,8 +9,6 @@ import javafx.stage.Stage;
 import model.Customer;
 
 import java.io.IOException;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CustomerSearchFormController {
@@ -22,7 +19,7 @@ public class CustomerSearchFormController {
 
     public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/DashBoardForm.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/MainForm.fxml"))));
         stage.setTitle("Timber Mill Management System - Ver 0.1.0");
         stage.show();
     }
