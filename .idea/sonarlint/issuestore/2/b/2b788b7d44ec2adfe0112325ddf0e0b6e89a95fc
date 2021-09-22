@@ -1,0 +1,25 @@
+
+J
+java:S3740"/Provide the parametrized type for this generic.(ˆˆãòùÿÿÿÿ
+D
+java:S3740"/Provide the parametrized type for this generic.(×Í´
+J
+java:S3740"/Provide the parametrized type for this generic.(ªúŞÈøÿÿÿÿ
+B
+java:S16027",Remove useless curly braces around statement(ñ·Ó¥
+=
+java:S1128
+"'Remove this unused import 'model.Item'.(ºÖä»
+A
+java:S1128"+Remove this unused import 'view.Tm.ItemTm'.(ï¦Áê
+f	java:S117*"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û¼™®
+q
+java:S1104"VMake tblExpense a static final constant or non-public and provide accessors if needed.(Ì«–ïÿÿÿÿÿ
+s
+java:S1104"XMake colExpenseId a static final constant or non-public and provide accessors if needed.(ˆˆãòùÿÿÿÿ
+o
+java:S1104"ZMake colExpenseType a static final constant or non-public and provide accessors if needed.(×Í´
+w
+java:S1104"\Make colExpenseAmount a static final constant or non-public and provide accessors if needed.(ªúŞÈøÿÿÿÿ
+j
+java:S2095("OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ü‚Èùÿÿÿÿ

@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="649.0" prefWidth="1097.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportFormController">
+<AnchorPane prefHeight="746.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportFormController">
    <children>
-      <AnchorPane prefHeight="652.0" prefWidth="293.0" style="-fx-background-color: #bdc3c7;">
+      <AnchorPane prefHeight="753.0" prefWidth="293.0" style="-fx-background-color: #bdc3c7;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="60.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -27,6 +26,6 @@
             <JFXButton layoutX="94.0" layoutY="400.0" onAction="#annuallyReportOnAction" style="-fx-background-color: #fa8231;" text="Annually" textFill="WHITE" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="291.0" layoutY="-3.0" prefHeight="655.0" prefWidth="808.0" />
+      <AnchorPane layoutX="291.0" layoutY="-3.0" prefHeight="761.0" prefWidth="808.0" />
    </children>
 </AnchorPane>

@@ -12,11 +12,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import sun.java2d.pipe.SpanClipRenderer;
 
 import java.io.IOException;
 import java.net.URL;
@@ -31,17 +29,14 @@ public class MainFormController {
     public StackPane context;
 
     public void initialize() {
-        loadDate();
-        loadTime();
+        loadDateAndTime();
     }
 
-    private void loadDate() {
+    private void loadDateAndTime() {
         Date date = new Date();
-        SimpleDateFormat f = new SimpleDateFormat("YYYY-MM-dd");
+        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
         lblDate.setText(f.format(date));
-    }
 
-    private void loadTime() {
         Timeline time = new Timeline(new KeyFrame(Duration.ZERO, e -> {
             LocalTime localTime = LocalTime.now();
             lblTime.setText(
@@ -54,67 +49,32 @@ public class MainFormController {
         time.play();
     }
 
-    public void CustomerFormOnAction(MouseEvent mouseEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/CustomerForm.fxml"))));
-        stage.setTitle("Customer's Form");
-        stage.show();
+    public void machineryOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/MachineryForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 
-    public void machineryOnAction(MouseEvent mouseEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/MachineryForm.fxml"))));
-        stage.setTitle("Machinery Form");
-        stage.show();
+    public void supplierOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/SupplierForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 
-    public void reportOnAction(MouseEvent mouseEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/ReportForm.fxml"))));
-        stage.setTitle("Report Form");
-        stage.show();
+    public void placeOrderOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/OrderForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 
-    public void itemOnAction(MouseEvent mouseEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/ItemForm.fxml"))));
-        stage.setTitle("Item Form");
-        stage.show();
-    }
-
-    public void ServantOnAction(MouseEvent mouseEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/EmployeeForm.fxml"))));
-        stage.setTitle("Employee Form");
-        stage.show();
-    }
-
-    public void supplierOnAction(MouseEvent mouseEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/SupplierForm.fxml"))));
-        stage.setTitle("Supplier Form");
-        stage.show();
-    }
-
-    public void woodTypeOnAction(MouseEvent mouseEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/WoodTypeForm.fxml"))));
-        stage.setTitle("Wood Type Form");
-        stage.show();
-    }
-
-    public void placeOrderOnAction(MouseEvent mouseEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/OrderForm.fxml"))));
-        stage.setTitle("Place Order Form");
-        stage.show();
-    }
-
-    public void expenseOnAction(MouseEvent mouseEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/ExpenseForm.fxml"))));
-        stage.setTitle("Expense Form");
-        stage.show();
+    public void expenseOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/ExpenseForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 
     public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
@@ -124,10 +84,18 @@ public class MainFormController {
         context.getChildren().add(load);
     }
 
-    public void customerOnAction(ActionEvent actionEvent) {
+    public void customerOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/CustomerForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 
-    public void orderOnAction(ActionEvent actionEvent) {
+    public void orderOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/OrderForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
     }
 
     public void logOutOnAction(ActionEvent actionEvent) {
@@ -145,9 +113,36 @@ public class MainFormController {
 
     public void aboutUsOnAction(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/AboutUs.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/AboutUsForm.fxml"))));
         stage.setTitle("About Us");
         stage.show();
     }
 
+    public void itemsOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/ItemForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
+    }
+
+    public void employeeOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/EmployeeForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
+    }
+
+    public void woodTypesOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/WoodTypeForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
+    }
+
+    public void reportsOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/ReportForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        context.getChildren().clear();
+        context.getChildren().add(load);
+    }
 }

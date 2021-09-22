@@ -1,0 +1,19 @@
+
+T
+java:S1854">Remove this useless assignment to local variable "customerId".(Ş¿«É
+G
+java:S1172"2Remove this unused method parameter "actionEvent".(¥ÿÏ
+E
+java:S1481"/Remove this unused "customerId" local variable.(Ş¿«É
+G
+java:S11724"2Remove this unused method parameter "actionEvent".(ÚÅÙ}
+g
+java:S1104"QMake txtId a static final constant or non-public and provide accessors if needed.(Ú…á¬
+n
+java:S1104"SMake txtName a static final constant or non-public and provide accessors if needed.(¨äİìÿÿÿÿÿ
+m
+java:S1104"RMake txtQty a static final constant or non-public and provide accessors if needed.(„¬‘³øÿÿÿÿ
+i
+java:S1104"TMake txtModel a static final constant or non-public and provide accessors if needed.(¢¼ñV
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ùó ıÿÿÿÿ

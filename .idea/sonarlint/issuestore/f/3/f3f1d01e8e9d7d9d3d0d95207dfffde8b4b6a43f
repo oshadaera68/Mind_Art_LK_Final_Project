@@ -1,0 +1,15 @@
+
+M
+java:S1172"2Remove this unused method parameter "actionEvent".(ŒËõ÷ıÿÿÿÿ
+G
+java:S11720"2Remove this unused method parameter "actionEvent".(ÚÅÙ}
+g
+java:S1104"QMake txtId a static final constant or non-public and provide accessors if needed.(Ú…á¬
+n
+java:S1104"SMake txtName a static final constant or non-public and provide accessors if needed.(¨äİìÿÿÿÿÿ
+q
+java:S1104"VMake txtAddress a static final constant or non-public and provide accessors if needed.(©ûîùıÿÿÿÿ
+k
+java:S1104"UMake txtTeleNo a static final constant or non-public and provide accessors if needed.(ÒÆØÂ
+e
+java:S2095'"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ò€§

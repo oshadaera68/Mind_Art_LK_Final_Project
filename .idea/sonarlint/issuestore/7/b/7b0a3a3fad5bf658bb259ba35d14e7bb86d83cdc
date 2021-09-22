@@ -1,0 +1,21 @@
+
+M
+java:S1172"2Remove this unused method parameter "actionEvent".(ï”¯§ÿÿÿÿÿ
+G
+java:S1172"2Remove this unused method parameter "actionEvent".(ÚÅÙ}
+H
+java:S1172&"2Remove this unused method parameter "actionEvent".(ì­şÌ
+W
+java:S1126?"AReplace this if-then-else statement by a single return statement.(í‚êØ
+g
+java:S1104"QMake txtID a static final constant or non-public and provide accessors if needed.(³óÓ»
+n
+java:S1104"SMake txtName a static final constant or non-public and provide accessors if needed.(¨äİìÿÿÿÿÿ
+q
+java:S1104"VMake txtAddress a static final constant or non-public and provide accessors if needed.(©ûîùıÿÿÿÿ
+m
+java:S1104"XMake txtTelephone a static final constant or non-public and provide accessors if needed.(ÿÆìD
+e
+java:S2095'"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¶ãáß
+e
+java:S2095?"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(í‚êØ

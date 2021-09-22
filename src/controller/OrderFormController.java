@@ -8,11 +8,15 @@ import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import model.Customer;
 import model.Item;
@@ -20,6 +24,8 @@ import model.ItemDetails;
 import model.Order;
 import view.Tm.CartTm;
 
+import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
@@ -185,11 +191,9 @@ public class OrderFormController {
                 new Alert(Alert.AlertType.WARNING, "Invalid QTY").show();
                 return;
             }
-
             observableList.remove(rowNumber);
             observableList.add(newTm);
         }
-
         tblCart.setItems(observableList);
         CalculateCost();
     }
@@ -215,24 +219,29 @@ public class OrderFormController {
         if (cartSelectedRowForRemove == -1) {
             new Alert(Alert.AlertType.WARNING, "please select a row").show();
         } else {
-            new Alert(Alert.AlertType.CONFIRMATION, "Cleared Data in row").show();
             observableList.remove(cartSelectedRowForRemove);
             tblCart.refresh();
         }
     }
 
-    public void placeOrderOnAction(ActionEvent actionEvent) {
+    public void placeOrderOnAction(ActionEvent actionEvent) throws IOException {
         ArrayList<ItemDetails> itemDetails = new ArrayList<>();
         double ttl=0;
         for (CartTm tempTm : observableList) {
             ttl+=tempTm.getTotal();
             itemDetails.add(new ItemDetails(tempTm.getCode(),tempTm.getUnitPrice(), tempTm.getQty()));
         }
-        Order order = new Order(lblOrderId.getText(),cmbCustomerIds.getValue(),lblDate.getText(),lblTime.getText(),ttl,itemDetails
-
+        Order order = new Order(
+                lblOrderId.getText(),cmbCustomerIds.getValue(),lblDate.getText(),lblTime.getText(),ttl,itemDetails
         );
         if (new OrderController().placeOrder(order)){
-            new Alert(Alert.AlertType.CONFIRMATION,"Success").show();
+            URL resource = getClass().getResource("../view/BillForm.fxml");
+            Parent load = FXMLLoader.load(resource);
+            Stage stage = new Stage();
+            stage.setScene(new Scene(load));
+            stage.setTitle("Bill");
+            stage.show();
+//            new Alert(Alert.AlertType.CONFIRMATION,"Success").show();
             setOrderId();
         }else {
             new Alert(Alert.AlertType.WARNING, "Try Again").show();
