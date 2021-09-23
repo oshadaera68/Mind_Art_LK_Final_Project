@@ -45,19 +45,19 @@
             </HBox>
          </top>
          <left>
-            <VBox prefHeight="601.0" prefWidth="193.0" style="-fx-background-color: #1e90ff;" BorderPane.alignment="CENTER">
+            <VBox prefHeight="746.0" prefWidth="192.0" style="-fx-background-color: #1e90ff;" BorderPane.alignment="CENTER">
                <children>
                   <JFXButton onAction="#dashBoardOnAction" prefHeight="41.0" prefWidth="193.0" text="Dashboard" textFill="WHITE">
                      <font>
                         <Font name="Dubai Regular" size="22.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="10.0" layoutY="10.0" onAction="#customerOnAction" onMouseClicked="#customerOnAction" prefHeight="41.0" prefWidth="193.0" text="Customer" textFill="WHITE">
+                  <JFXButton layoutX="10.0" layoutY="10.0" onAction="#customerOnAction" prefHeight="41.0" prefWidth="193.0" text="Customer" textFill="WHITE">
                      <font>
                         <Font name="Dubai Regular" size="22.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="10.0" layoutY="71.0" onAction="#machineryOnAction" onMouseClicked="#orderOnAction" prefHeight="41.0" prefWidth="193.0" text="Machinery" textFill="WHITE">
+                  <JFXButton layoutX="10.0" layoutY="71.0" onAction="#machineryOnAction" prefHeight="41.0" prefWidth="193.0" text="Machinery" textFill="WHITE">
                      <font>
                         <Font name="Dubai Regular" size="22.0" />
                      </font>
@@ -111,7 +111,7 @@
                </children></VBox>
          </left>
          <center>
-            <StackPane fx:id="context" prefHeight="667.0" prefWidth="946.0" BorderPane.alignment="CENTER" />
+            <StackPane fx:id="context" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
    </children>

@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="634.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+<AnchorPane prefHeight="751.0" prefWidth="1108.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
    <children>
-      <AnchorPane layoutY="-2.0" prefHeight="649.0" prefWidth="293.0" style="-fx-background-color: #95a5a6;">
+      <AnchorPane layoutY="-2.0" prefHeight="753.0" prefWidth="293.0" style="-fx-background-color: #95a5a6;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="176.0" layoutX="72.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -22,11 +22,11 @@
                </font>
             </Label>
             <JFXButton layoutX="78.0" layoutY="264.0" onAction="#customerAddOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #0984e3;" text="Add Customer" textFill="WHITE" />
-            <JFXButton layoutX="78.0" layoutY="324.0" onAction="#searchOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #16a085;" text="Search Customer" textFill="WHITE" />
-            <JFXButton layoutX="78.0" layoutY="442.0" onAction="#customerAllOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #e67e22;" text="All Customer Table" textFill="WHITE" />
-            <JFXButton layoutX="77.0" layoutY="385.0" onAction="#deleteCustomerOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #e74c3c;" text="Delete Customer" textFill="WHITE" />
+            <JFXButton layoutX="78.0" layoutY="346.0" onAction="#searchOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #16a085;" text="Search Customer" textFill="WHITE" />
+            <JFXButton layoutX="79.0" layoutY="508.0" onAction="#customerAllOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #e67e22;" text="All Customer Table" textFill="WHITE" />
+            <JFXButton layoutX="79.0" layoutY="426.0" onAction="#deleteCustomerOnAction" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #e74c3c;" text="Delete Customer" textFill="WHITE" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="context" layoutX="291.0" layoutY="-2.0" prefHeight="649.0" prefWidth="817.0" style="-fx-background-color: #ecf01f1;" />
+      <AnchorPane fx:id="context" layoutX="291.0" layoutY="-2.0" prefHeight="753.0" prefWidth="817.0" style="-fx-background-color: #ecf01f1;" />
    </children>
 </AnchorPane>

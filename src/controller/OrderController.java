@@ -34,13 +34,12 @@ public class OrderController {
         try {
            con = DbConnection.getInstance().getConnection();
           con.setAutoCommit(false);
-          PreparedStatement stm = con.prepareStatement("INSERT INTO Orders VALUES (?,?,?,?,?)");
+          PreparedStatement stm = con.prepareStatement("INSERT INTO Orders() VALUES (?,?,?,?,?)");
           stm.setObject(1,order.getOrderID());
           stm.setObject(2,order.getCustomerId());
           stm.setObject(3,order.getDate());
           stm.setObject(4,order.getTime());
           stm.setObject(5,order.getCost());
-            System.out.println(order.getTime().length());
 
           if (stm.executeUpdate()>0){
              if(saveOrderDetail(order.getOrderID(),order.getDetails())){
@@ -66,7 +65,7 @@ public class OrderController {
 
     private boolean saveOrderDetail(String orderId, ArrayList<ItemDetails> itemDetails) throws SQLException, ClassNotFoundException {
         for (ItemDetails temp: itemDetails) {
-            PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("INSERT INTO OrderDetails VALUES (?,?,?)");
+            PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("INSERT INTO OrderDetails(ItemCode,OrderID,Qty,price) VALUES (?,?,?,?)");
             stm.setObject(1,temp.getItemCode());
             stm.setObject(2,orderId);
             stm.setObject(3,temp.getQtyForSell());

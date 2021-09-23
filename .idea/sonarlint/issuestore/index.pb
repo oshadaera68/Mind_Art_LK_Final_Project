@@ -17,12 +17,8 @@ L
 src/view/DeleteItemForm.fxml,2\7\276f84da0d41672546ed028c15f8806806682a60
 I
 src/view/AboutUsForm.fxml,a\d\ad802f774eb38c8494e68c5b3fca042afe6e253e
-G
-src/AppInitializer.java,5\8\580cc932433633b711bc392ae543e0f12b1bae87
 U
 %src/controller/AboutUsController.java,5\8\581afad3959c7128332eaa453d0a8132d4794627
-]
--src/controller/AddCustomerFormController.java,5\6\5622777c45e9118f36d51fb0c67ece42a30dcff4
 ]
 -src/controller/AddEmployeeFormController.java,c\6\c6d32d9b53fad3398f1a5784af5d4f7eec6346de
 L
@@ -57,8 +53,6 @@ Y
 )src/controller/ExpenseFormController.java,8\0\800adf0b7a462079023693582de0a79d47786578
 J
 src/view/Tm/ExpenseTm.java,f\e\fe092787ceb6f07bbd1227f02d80129b402a2c5c
-W
-'src/controller/LogInFormController.java,e\b\ebfd56ac237ef298775e56f974e80d4c54763d9b
 _
 /src/controller/MachineSearchFormController.java,3\8\3804cf3e6cdd8afe6e98c733d49b208964d8c80c
 `
@@ -85,3 +79,23 @@ Z
 *src/controller/SupplierFormController.java,4\e\4e5f79d3156de3f6de3a6a894c2da7028694ddf5
 c
 3src/controller/SupplierSelectAllFormController.java,0\3\03d6d891bd0651cfd4d6df73472877c7bf729d5c
+F
+src/model/Machine.java,9\f\9f3d017c4291b77638a30414c988ab862a6b70f7
+D
+src/model/Order.java,d\5\d5c9715ba2aaeb7cf89d6b5292bfb85c292d1d12
+Z
+*src/controller/CustomerFormController.java,1\4\1487044d2f1d4f2f60c7f0ca7a8b6e71d77755fa
+R
+".idea/libraries/javax_inject_1.xml,0\f\0f7f00944ba5f4ac10cb42640b7b95653c2c00b9
+\
+,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
+M
+Mind_Art_LK_Final_Project.iml,3\4\34fd405e593942c0ee1bc1504676fb0c7e49fb07
+F
+src/view/BillForm.fxml,6\f\6ff9239eba2cf1d0675dbd3b778f86b04a92d220
+V
+&src/controller/BillFormController.java,0\6\0692a7b768db57198b48fed82d2c076e1307daee
+G
+src/view/OrderForm.fxml,7\f\7f4c89015f85ffb535bbb47a65d54af7b80f25da
+W
+'src/controller/OrderFormController.java,a\4\a49a99a6689e0d02c7a83ef7f74ae2a549d332a7
