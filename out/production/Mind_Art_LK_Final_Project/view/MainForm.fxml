@@ -3,6 +3,8 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
@@ -45,17 +47,31 @@
             </HBox>
          </top>
          <left>
-            <VBox prefHeight="746.0" prefWidth="192.0" style="-fx-background-color: #1e90ff;" BorderPane.alignment="CENTER">
+            <VBox alignment="TOP_CENTER" focusTraversable="true" prefHeight="746.0" prefWidth="192.0" style="-fx-background-color: #1e90ff;" BorderPane.alignment="CENTER">
                <children>
                   <JFXButton onAction="#dashBoardOnAction" prefHeight="41.0" prefWidth="193.0" text="Dashboard" textFill="WHITE">
                      <font>
                         <Font name="Dubai Regular" size="22.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/clipart343777.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </JFXButton>
                   <JFXButton layoutX="10.0" layoutY="10.0" onAction="#customerOnAction" prefHeight="41.0" prefWidth="193.0" text="Customer" textFill="WHITE">
                      <font>
                         <Font name="Dubai Regular" size="22.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/icons8-customer-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </JFXButton>
                   <JFXButton layoutX="10.0" layoutY="71.0" onAction="#machineryOnAction" prefHeight="41.0" prefWidth="193.0" text="Machinery" textFill="WHITE">
                      <font>
@@ -96,17 +112,38 @@
                      <font>
                         <Font name="Dubai Regular" size="22.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/icons8-business-report-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </JFXButton>
                   <Separator prefWidth="200.0" />
                   <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="523.0" onAction="#aboutUsOnAction" prefHeight="41.0" prefWidth="193.0" ripplerFill="#fffefe" text="About Us" textFill="WHITE">
                      <font>
                         <Font name="Dubai Regular" size="22.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/icons8-about-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </JFXButton>
                   <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="583.0" onAction="#logOutOnAction" prefHeight="41.0" prefWidth="193.0" ripplerFill="#fffefe" text="Log Out" textFill="WHITE">
                      <font>
                         <Font name="Dubai Regular" size="22.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/icons8-exit-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </JFXButton>
                </children></VBox>
          </left>

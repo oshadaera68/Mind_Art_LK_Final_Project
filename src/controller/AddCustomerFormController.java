@@ -6,7 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.input.KeyCode;
+
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import model.Customer;
@@ -23,9 +23,9 @@ public class AddCustomerFormController {
     public JFXTextField txtTelp;
     public JFXButton btnAdd;
 
-    public void initialize() {
-        btnAdd.setDisable(true);
-    }
+//    public void initialize() {
+//        btnAdd.setDisable(true);
+//    }
 
     public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
@@ -45,9 +45,9 @@ public class AddCustomerFormController {
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
     }
 
-    public void textFieldKeyRelease(KeyEvent keyEvent) {
+   // public void textFieldKeyRelease(KeyEvent keyEvent) {
 
-        String cusIDRegEx = "^(C00-)[0-9]{3,4}$";
+       /* String cusIDRegEx = "^(C00-)[0-9]{3,4}$";
         String cusNameRegEx = "^[A-z ]{3,30}$";
         String cusAddressRegEx = "^[A-z0-9/ ]{6,30}$";
         String cusTelephoneRegEx = "^0[0-9][0-9]?(-)?[0-9]{7}$";
@@ -72,21 +72,23 @@ public class AddCustomerFormController {
             txtName.requestFocus();
         }
 
-
            String txtAddressText = txtAddress.getText();
            if (addressCompile.matcher(txtAddressText).matches()) {
-               new Alert(Alert.AlertType.CONFIRMATION, "OK").show();
+               //txtAddress.setStyle("-fx-border-color:green");
+               //new Alert(Alert.AlertType.CONFIRMATION, "OK").show();
                txtTelp.requestFocus();
            } else {
-               /*new Alert(Alert.AlertType.WARNING, "try again").showAndWait();
-               txtAddress.requestFocus();*/
+               new Alert(Alert.AlertType.WARNING,"try again").showAndWait();
+               txtAddress.requestFocus();
            }
 
            String txtTelpText = txtTelp.getText();
            if (telephoneCompile.matcher(txtTelpText).matches()){
                new Alert(Alert.AlertType.CONFIRMATION,"OK").show();
+               btnAdd.requestFocus();
            }else{
                new Alert(Alert.AlertType.WARNING,"try again").show();
+               txtTelp.requestFocus();
            }
 
        }else{
@@ -94,7 +96,7 @@ public class AddCustomerFormController {
             txtId.requestFocus();
             btnAdd.setDisable(true);
         }
-    }
+    }*/
 
 
 

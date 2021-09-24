@@ -13,7 +13,7 @@ p
 java:S1104"ZMake txtExpenseType a static final constant or non-public and provide accessors if needed.(Ÿ¶¥Ú
 w
 java:S1104"\Make txtExpenseAmount a static final constant or non-public and provide accessors if needed.(÷ìèÂýÿÿÿÿ
-j
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¤ˆòˆÿÿÿÿÿ
 e
 java:S20953"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(£ì£±
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¤ˆòˆÿÿÿÿÿ
