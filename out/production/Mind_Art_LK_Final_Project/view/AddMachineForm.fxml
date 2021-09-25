@@ -20,26 +20,25 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtID" layoutX="283.0" layoutY="154.0" prefHeight="31.0" prefWidth="375.0" />
-      <Label layoutX="61.0" layoutY="232.0" prefHeight="34.0" prefWidth="180.0" text="Machine Name:">
+      <JFXTextField fx:id="txtID" layoutX="283.0" layoutY="154.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="375.0" />
+      <Label layoutX="61.0" layoutY="256.0" prefHeight="34.0" prefWidth="180.0" text="Machine Name:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtName" layoutX="283.0" layoutY="234.0" prefHeight="31.0" prefWidth="375.0" />
-      <Label layoutX="59.0" layoutY="315.0" prefHeight="34.0" prefWidth="196.0" text="Qty:">
+      <JFXTextField fx:id="txtName" layoutX="283.0" layoutY="258.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="375.0" />
+      <Label layoutX="59.0" layoutY="348.0" prefHeight="34.0" prefWidth="196.0" text="Qty:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtQty" layoutX="283.0" layoutY="316.0" prefHeight="31.0" prefWidth="375.0" />
-      <Label layoutX="59.0" layoutY="405.0" prefHeight="34.0" prefWidth="196.0" text="Model:">
+      <JFXTextField fx:id="txtQty" layoutX="283.0" layoutY="349.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="375.0" />
+      <Label layoutX="59.0" layoutY="453.0" prefHeight="34.0" prefWidth="196.0" text="Model:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtModel" layoutX="283.0" layoutY="406.0" prefHeight="31.0" prefWidth="375.0" />
-      <JFXButton layoutX="510.0" layoutY="596.0" onAction="#addMachineOnAction" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #0984e3;" text="Add" textFill="WHITE" />
-      <JFXButton layoutX="670.0" layoutY="596.0" onAction="#dashBoardOnAction" prefHeight="31.0" prefWidth="117.0" style="-fx-background-color: #d63031;" text="Cancel" textFill="WHITE" />
+      <JFXTextField fx:id="txtModel" layoutX="283.0" layoutY="454.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="375.0" />
+      <JFXButton fx:id="btnAddMachine" layoutX="510.0" layoutY="596.0" onAction="#addMachineOnAction" prefHeight="31.0" prefWidth="241.0" style="-fx-background-color: #0984e3;" text="Add" textFill="WHITE" />
    </children>
 </AnchorPane>

@@ -1,7 +1,6 @@
 package controller;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,28 +14,23 @@ public class EmployeeFormController {
     public AnchorPane context;
 
     public void addEmployeeOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/AddEmployeeForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("AddEmployeeForm");
     }
 
     public void searchEmployeeOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SearchEmployeeForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("SearchEmployeeForm");
     }
 
     public void deleteEmployeeOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/DeleteEmployeeForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("DeleteEmployeeForm");
     }
 
     public void selectAllEmployeeOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/EmployeeSelectAllForm.fxml");
+        loadUi("EmployeeSelectAllForm");
+    }
+
+    void loadUi(String fileName) throws IOException {
+        URL resource = getClass().getResource("../view/" + fileName + ".fxml");
         Parent load = FXMLLoader.load(resource);
         context.getChildren().clear();
         context.getChildren().add(load);

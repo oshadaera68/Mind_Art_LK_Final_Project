@@ -29,13 +29,6 @@ public class DeleteCustomerFormController {
 
     }
 
-    public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/MainForm.fxml"))));
-        stage.setTitle("Timber Mill Management System - Ver 0.1.0");
-        stage.show();
-    }
-
     public void searchCustomer(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Customer WHERE CusID=?");
         stm.setObject(1, txtCusId.getText());

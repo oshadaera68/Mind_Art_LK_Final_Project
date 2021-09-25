@@ -19,25 +19,25 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtSupID" layoutX="328.0" layoutY="154.0" prefHeight="31.0" prefWidth="407.0" />
+      <JFXTextField fx:id="txtSupID" layoutX="328.0" layoutY="154.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="407.0" />
       <Label layoutX="87.0" layoutY="248.0" text="Wood Type ID:">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtWoodId" layoutX="329.0" layoutY="252.0" prefHeight="31.0" prefWidth="407.0" />
+      <JFXTextField fx:id="txtWoodId" layoutX="329.0" layoutY="252.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="407.0" />
       <Label layoutX="87.0" layoutY="349.0" text="Qty:">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtQty" layoutX="329.0" layoutY="353.0" prefHeight="31.0" prefWidth="407.0" />
+      <JFXTextField fx:id="txtQty" layoutX="329.0" layoutY="353.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="407.0" />
       <Label layoutX="87.0" layoutY="452.0" text="Size:">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtSize" layoutX="329.0" layoutY="456.0" prefHeight="31.0" prefWidth="407.0" />
-      <JFXButton layoutX="500.0" layoutY="558.0" onAction="#addOnAction" prefHeight="31.0" prefWidth="199.0" style="-fx-background-color: #3498db;" text="Add" textFill="WHITE" />
+      <JFXTextField fx:id="txtSize" layoutX="329.0" layoutY="456.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="407.0" />
+      <JFXButton fx:id="btnAddSuppDetail" layoutX="500.0" layoutY="558.0" onAction="#addOnAction" prefHeight="31.0" prefWidth="199.0" style="-fx-background-color: #3498db;" text="Add" textFill="WHITE" />
    </children>
 </AnchorPane>

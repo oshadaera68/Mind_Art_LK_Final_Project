@@ -12,28 +12,23 @@ public class ItemFormController {
     public AnchorPane context;
 
     public void addItemOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/AddItemForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("AddItemForm");
     }
 
     public void searchItemOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SearchItemForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("SearchItemForm");
     }
 
     public void deleteItemOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/DeleteItemForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("DeleteItemForm");
     }
 
     public void selectAllFormOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/ItemSelectAllForm.fxml");
+        loadUi("ItemSelectAllForm");
+    }
+
+    void loadUi(String fileName) throws IOException {
+        URL resource = getClass().getResource("../view/" + fileName + ".fxml");
         Parent load = FXMLLoader.load(resource);
         context.getChildren().clear();
         context.getChildren().add(load);

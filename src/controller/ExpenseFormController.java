@@ -12,28 +12,23 @@ public class ExpenseFormController {
     public AnchorPane context;
 
     public void addExpenseOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/AddExpenseForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("AddExpenseForm");
     }
 
     public void searchExpenseOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SearchExpenseForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("SearchExpenseForm");
     }
 
     public void deleteExpenseOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/DeleteExpenseForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("DeleteExpenseForm");
     }
 
     public void selectAllExpenseOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SelectAllExpenseForm.fxml");
+        loadUi("SelectAllExpenseForm");
+    }
+
+    void loadUi(String fileName) throws IOException {
+        URL resource = getClass().getResource("../view/" + fileName + ".fxml");
         Parent load = FXMLLoader.load(resource);
         context.getChildren().clear();
         context.getChildren().add(load);

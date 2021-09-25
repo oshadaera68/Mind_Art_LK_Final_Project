@@ -25,21 +25,20 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtId" labelFloat="true" layoutX="273.0" layoutY="145.0" prefHeight="31.0" prefWidth="375.0" promptText="C00-001" />
+      <JFXTextField fx:id="txtId" focusColor="#124ecc" labelFloat="true" layoutX="273.0" layoutY="145.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="375.0" promptText="C00-001" unFocusColor="BLACK" />
       <Label layoutX="49.0" layoutY="305.0" prefHeight="34.0" prefWidth="196.0" text="Customer Address:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="273.0" layoutY="306.0" prefHeight="31.0" prefWidth="375.0" promptText="galle" />
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="273.0" layoutY="306.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="375.0" promptText="galle" />
       <Label layoutX="49.0" layoutY="395.0" prefHeight="34.0" prefWidth="196.0" text="Telephone No:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtTelp" labelFloat="true" layoutX="273.0" layoutY="396.0" prefHeight="31.0" prefWidth="375.0" promptText="0993456789" />
-      <JFXButton fx:id="btnAdd" layoutX="500.0" layoutY="586.0" onAction="#addCustomerOnAction" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #0984e3;" text="Add" textFill="WHITE" />
-      <JFXButton layoutX="660.0" layoutY="586.0" onAction="#dashBoardOnAction" prefHeight="31.0" prefWidth="117.0" style="-fx-background-color: #d63031;" text="Cancel" textFill="WHITE" />
-      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="273.0" layoutY="224.0" prefHeight="31.0" prefWidth="375.0" promptText="ishan" />
+      <JFXTextField fx:id="txtTelp" labelFloat="true" layoutX="273.0" layoutY="396.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="375.0" promptText="0993456789" />
+      <JFXButton fx:id="btnAdd" layoutX="500.0" layoutY="586.0" onAction="#addCustomerOnAction" prefHeight="31.0" prefWidth="231.0" style="-fx-background-color: #0984e3;" text="Add" textFill="WHITE" />
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="273.0" layoutY="224.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="375.0" promptText="ishan" />
    </children>
 </AnchorPane>

@@ -50,52 +50,27 @@ public class MainFormController {
     }
 
     public void machineryOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/MachineryForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("MachineryForm");
     }
 
     public void supplierOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SupplierForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("SupplierForm");
     }
 
     public void placeOrderOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/OrderForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("OrderForm");
     }
 
     public void expenseOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/ExpenseForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("ExpenseForm");
     }
 
     public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/DashBoardForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("DashBoardForm");
     }
 
     public void customerOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/CustomerForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
-    }
-
-    public void orderOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/OrderForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("CustomerForm");
     }
 
     public void logOutOnAction(ActionEvent actionEvent) {
@@ -108,7 +83,6 @@ public class MainFormController {
             Platform.exit();
             System.exit(0);
         }
-
     }
 
     public void aboutUsOnAction(ActionEvent actionEvent) throws IOException {
@@ -119,28 +93,23 @@ public class MainFormController {
     }
 
     public void itemsOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/ItemForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("ItemForm");
     }
 
     public void employeeOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/EmployeeForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("EmployeeForm");
     }
 
     public void woodTypesOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/WoodTypeForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("WoodTypeForm");
     }
 
     public void reportsOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/ReportForm.fxml");
+        loadUi("ReportForm");
+    }
+
+    void loadUi(String fileName) throws IOException {
+        URL resource = getClass().getResource("../view/" + fileName + ".fxml");
         Parent load = FXMLLoader.load(resource);
         context.getChildren().clear();
         context.getChildren().add(load);

@@ -3,16 +3,16 @@ package controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.stage.Stage;
 import model.Customer;
+import util.ValidationUtil;
 
-import java.io.IOException;
 import java.sql.SQLException;
+import java.util.LinkedHashMap;
 import java.util.regex.Pattern;
 
 public class AddCustomerFormController {
@@ -22,16 +22,15 @@ public class AddCustomerFormController {
     public JFXTextField txtAddress;
     public JFXTextField txtTelp;
     public JFXButton btnAdd;
+    LinkedHashMap<TextField,Pattern> map=new LinkedHashMap<>();
+    Pattern cusIDRegEx = Pattern.compile("^(C00-)[0-9]{3,4}$");
+    Pattern cusNameRegEx = Pattern.compile("^[A-z ]{3,20}$");
+    Pattern cusAddressRegEx = Pattern.compile("^[A-z0-9/ ]{6,30}$");
+    Pattern cusTelephoneRegEx = Pattern.compile("^0[0-9][0-9]?(-)?[0-9]{7}$");
 
-//    public void initialize() {
-//        btnAdd.setDisable(true);
-//    }
-
-    public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/MainForm.fxml"))));
-        stage.setTitle("Timber Mill Management System - Ver 0.1.0");
-        stage.show();
+    public void initialize(){
+        btnAdd.setDisable(true);
+        storeValidate();
     }
 
     public void addCustomerOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
@@ -45,93 +44,23 @@ public class AddCustomerFormController {
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
     }
 
-   // public void textFieldKeyRelease(KeyEvent keyEvent) {
+    public void textFieldKeyRelease(KeyEvent keyEvent) {
+            Object response = ValidationUtil.validate(map,btnAdd);
 
-       /* String cusIDRegEx = "^(C00-)[0-9]{3,4}$";
-        String cusNameRegEx = "^[A-z ]{3,30}$";
-        String cusAddressRegEx = "^[A-z0-9/ ]{6,30}$";
-        String cusTelephoneRegEx = "^0[0-9][0-9]?(-)?[0-9]{7}$";
-
-        Pattern idCompile = Pattern.compile(cusIDRegEx);
-        Pattern nameCompile = Pattern.compile(cusNameRegEx);
-        Pattern addressCompile = Pattern.compile(cusAddressRegEx);
-        Pattern telephoneCompile = Pattern.compile(cusTelephoneRegEx);
-
-        String txtIdText = txtId.getText();
-
-       if (idCompile.matcher(txtIdText).matches()) {
-            new Alert(Alert.AlertType.CONFIRMATION, "OK").showAndWait();
-            txtName.requestFocus();
-
-        String txtNameText = txtName.getText();
-        if (nameCompile.matcher(txtNameText).matches()) {
-            new Alert(Alert.AlertType.CONFIRMATION, "OK").show();
-            txtAddress.requestFocus();
-        } else {
-            new Alert(Alert.AlertType.WARNING, "try again").showAndWait();
-            txtName.requestFocus();
-        }
-
-           String txtAddressText = txtAddress.getText();
-           if (addressCompile.matcher(txtAddressText).matches()) {
-               //txtAddress.setStyle("-fx-border-color:green");
-               //new Alert(Alert.AlertType.CONFIRMATION, "OK").show();
-               txtTelp.requestFocus();
-           } else {
-               new Alert(Alert.AlertType.WARNING,"try again").showAndWait();
-               txtAddress.requestFocus();
-           }
-
-           String txtTelpText = txtTelp.getText();
-           if (telephoneCompile.matcher(txtTelpText).matches()){
-               new Alert(Alert.AlertType.CONFIRMATION,"OK").show();
-               btnAdd.requestFocus();
-           }else{
-               new Alert(Alert.AlertType.WARNING,"try again").show();
-               txtTelp.requestFocus();
-           }
-
-       }else{
-            new Alert(Alert.AlertType.WARNING, "try again").showAndWait();
-            txtId.requestFocus();
-            btnAdd.setDisable(true);
-        }
-    }*/
-
-
-
-
-       /* String regEx = "";
-        String txtId1 = txtId.getText();
-        Pattern compile = Pattern.compile(regEx);
-        boolean matches = compile.matcher(txtId1).matches();
-
-        String regEx1 = "";
-        String textName1 = txtName.getText();
-        Pattern compile1 = Pattern.compile(regEx1);
-        boolean matches1 = compile1.matcher(textName1).matches();*/
-
-        /* if (keyEvent.getCode() == KeyCode.ENTER) {
-         */
-
-            /*if (matches){
-
-                txtName.requestFocus();
-                // btnAdd.setDisable(false);
-            }else{
-                new Alert(Alert.AlertType.WARNING,"try again").showAndWait();
-                btnAdd.setDisable(true);
-            }
-
-            if(keyEvent.getCode()== KeyCode.ENTER) {
-                if (matches1) {
-                    new Alert(Alert.AlertType.CONFIRMATION, "OK").showAndWait();
-                    txtAddress.requestFocus();
-                } else {
-                    new Alert(Alert.AlertType.WARNING, "try again").showAndWait();
-                    btnAdd.setDisable(true);
+            if (keyEvent.getCode() == KeyCode.ENTER) {
+                if (response instanceof TextField) {
+                    TextField errorText = (TextField) response;
+                    errorText.requestFocus();
+                } else if (response instanceof Boolean) {
+                    new Alert(Alert.AlertType.INFORMATION, "Aded").showAndWait();
                 }
             }
-        }*/
+        }
 
+    private void storeValidate() {
+        map.put(txtId, cusIDRegEx);
+        map.put(txtName, cusNameRegEx);
+        map.put(txtAddress, cusAddressRegEx);
+        map.put(txtTelp, cusTelephoneRegEx);
     }
+}

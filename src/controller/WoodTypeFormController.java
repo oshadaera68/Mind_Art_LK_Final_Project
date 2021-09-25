@@ -12,28 +12,23 @@ public class WoodTypeFormController {
     public AnchorPane context;
 
     public void addWoodTypeOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/AddWoodTypeForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("AddWoodTypeForm");
     }
 
     public void searchWoodTypeOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SearchWoodTypeForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("SearchWoodTypeForm");
     }
 
     public void deleteWoodTypeOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/DeleteWoodTypeForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("DeleteWoodTypeForm");
     }
 
     public void selectAllWoodTypeOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SelectAllWoodTypeForm.fxml");
+        loadUi("SelectAllWoodTypeForm");
+    }
+
+    void loadUi(String fileName) throws IOException {
+        URL resource = getClass().getResource("../view/" + fileName + ".fxml");
         Parent load = FXMLLoader.load(resource);
         context.getChildren().clear();
         context.getChildren().add(load);

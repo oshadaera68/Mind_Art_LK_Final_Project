@@ -15,28 +15,23 @@ public class SupplierDetailFormController {
     public AnchorPane supplierContexts;
 
     public void addSupplierDetailOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/AddSupplierDetailForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("AddSupplierDetailForm");
     }
 
     public void searchSupplierDetailOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SearchSupplierDetailForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("SearchSupplierDetailForm");
     }
 
     public void selectAllFormOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SelectAllSupplierDetailForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("SelectAllSupplierDetailForm");
     }
 
     public void deleteSupplierDetailsOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/DeleteSupplierDetailForm.fxml");
+        loadUi("DeleteSupplierDetailForm");
+    }
+
+    void loadUi(String fileName) throws IOException {
+        URL resource = getClass().getResource("../view/" + fileName + ".fxml");
         Parent load = FXMLLoader.load(resource);
         context.getChildren().clear();
         context.getChildren().add(load);

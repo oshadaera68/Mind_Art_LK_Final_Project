@@ -12,28 +12,23 @@ public class CustomerFormController {
     public AnchorPane context;
 
     public void customerAddOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/AddCustomerForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("AddCustomerForm");
     }
 
     public void searchOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/CustomerSearchForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("CustomerSearchForm");
     }
 
     public void customerAllOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/CustomerSelectAllForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("CustomerSelectAllForm");
     }
 
     public void deleteCustomerOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/DeleteCustomerForm.fxml");
+        loadUi("DeleteCustomerForm");
+    }
+
+    void loadUi(String fileName) throws IOException {
+        URL resource = getClass().getResource("../view/" + fileName + ".fxml");
         Parent load = FXMLLoader.load(resource);
         context.getChildren().clear();
         context.getChildren().add(load);

@@ -12,28 +12,23 @@ public class MachineryFormController {
     public AnchorPane context;
 
     public void addMachineOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/AddMachineForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("AddMachineForm");
     }
 
     public void searchMachineOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/MachineSearchForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("SearchMachineForm");
     }
 
     public void deleteMachineOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/DeleteMachineForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        loadUi("DeleteMachineForm");
     }
 
     public void selectAllMachineOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/MachineSelectAllForm.fxml");
+        loadUi("MachineSelectAllForm");
+    }
+
+    void loadUi(String fileName) throws IOException {
+        URL resource = getClass().getResource("../view/" + fileName + ".fxml");
         Parent load = FXMLLoader.load(resource);
         context.getChildren().clear();
         context.getChildren().add(load);

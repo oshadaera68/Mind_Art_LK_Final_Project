@@ -14,28 +14,23 @@ public class SupplierFormController {
     public AnchorPane contexts;
 
     public void addSupplierOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/AddSupplierForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        contexts.getChildren().clear();
-        contexts.getChildren().add(load);
+        loadUi("AddSupplierForm");
     }
 
     public void searchSupplierOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SearchSupplierForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        contexts.getChildren().clear();
-        contexts.getChildren().add(load);
+        loadUi("SearchSupplierForm");
     }
 
     public void deleteSupplierOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/DeleteSupplierForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        contexts.getChildren().clear();
-        contexts.getChildren().add(load);
+        loadUi("DeleteSupplierForm");
     }
 
     public void supplierTableOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SupplierSelectAllForm.fxml");
+        loadUi("SelectAllSupplerForm");
+    }
+
+    void loadUi(String fileName) throws IOException {
+        URL resource = getClass().getResource("../view/" + fileName + ".fxml");
         Parent load = FXMLLoader.load(resource);
         contexts.getChildren().clear();
         contexts.getChildren().add(load);
@@ -64,7 +59,7 @@ public class SupplierFormController {
         Parent load = FXMLLoader.load(resource);
         Stage window = (Stage) contexts.getScene().getWindow();
         window.setScene(new Scene(load));
-        window.setTitle("Supplier Detail Form");
+        window.setTitle("Timber Mill Management System - v0.1.0");
         window.show();
     }
 }
