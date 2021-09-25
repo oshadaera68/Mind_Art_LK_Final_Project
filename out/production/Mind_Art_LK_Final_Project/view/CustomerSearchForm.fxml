@@ -15,31 +15,30 @@
          </font>
       </Label>
       <Separator layoutX="238.0" layoutY="69.0" prefHeight="0.0" prefWidth="543.0" />
-      <Label layoutX="66.0" layoutY="153.0" prefHeight="34.0" prefWidth="138.0" text="Customer ID:">
+      <Label layoutX="66.0" layoutY="145.0" prefHeight="34.0" prefWidth="138.0" text="Customer ID:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtId" layoutX="283.0" layoutY="154.0" prefHeight="31.0" prefWidth="375.0" />
+      <JFXTextField fx:id="txtId" layoutX="283.0" layoutY="146.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="375.0" />
       <Label layoutX="61.0" layoutY="232.0" prefHeight="34.0" prefWidth="180.0" text="Customer Name:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
       <JFXTextField fx:id="txtName" layoutX="283.0" layoutY="234.0" prefHeight="31.0" prefWidth="375.0" />
-      <Label layoutX="59.0" layoutY="315.0" prefHeight="34.0" prefWidth="196.0" text="Customer Address:">
+      <Label layoutX="59.0" layoutY="332.0" prefHeight="34.0" prefWidth="196.0" text="Customer Address:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtAddress" layoutX="283.0" layoutY="316.0" prefHeight="31.0" prefWidth="375.0" />
-      <Label layoutX="59.0" layoutY="405.0" prefHeight="34.0" prefWidth="196.0" text="Telephone No:">
+      <JFXTextField fx:id="txtAddress" layoutX="283.0" layoutY="336.0" prefHeight="31.0" prefWidth="375.0" />
+      <Label layoutX="59.0" layoutY="436.0" prefHeight="34.0" prefWidth="196.0" text="Telephone No:">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtTel" layoutX="283.0" layoutY="406.0" prefHeight="31.0" prefWidth="375.0" />
-      <JFXButton layoutX="510.0" layoutY="596.0" onAction="#searchCustomerOnAction" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #0984e3;" text="Search" textFill="WHITE" />
-      <JFXButton layoutX="670.0" layoutY="596.0" onAction="#dashBoardOnAction" prefHeight="31.0" prefWidth="117.0" style="-fx-background-color: #d63031;" text="Cancel" textFill="WHITE" />
+      <JFXTextField fx:id="txtTel" layoutX="283.0" layoutY="437.0" prefHeight="31.0" prefWidth="375.0" />
+      <JFXButton fx:id="btnSearchForm" layoutX="510.0" layoutY="581.0" onAction="#searchCustomerOnAction" prefHeight="31.0" prefWidth="236.0" style="-fx-background-color: #0984e3;" text="Search" textFill="WHITE" />
    </children>
 </AnchorPane>
