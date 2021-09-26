@@ -59,5 +59,4 @@ public class ItemSelectAllFormController {
         });
         tblItem.setItems(obList);
     }
-
 }

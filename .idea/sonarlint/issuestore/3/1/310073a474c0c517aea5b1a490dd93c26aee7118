@@ -1,0 +1,12 @@
+
+C	java:S108J")Either remove or fill this block of code.(Ó˜„Äÿÿÿÿÿ
+W
+java:S2259:"AA "NullPointerException" could be thrown; "con" is nullable here.(½¼§¢
+j
+java:S2095W"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(²³ÿ†þÿÿÿÿ
+j
+java:S2095D"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(©»‘Áÿÿÿÿÿ
+e
+java:S2095%"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(÷ÉêÆ
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(îÕ¸íøÿÿÿÿ

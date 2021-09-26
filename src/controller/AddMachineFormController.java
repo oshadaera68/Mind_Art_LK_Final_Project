@@ -28,7 +28,7 @@ public class AddMachineFormController {
     Pattern machineIdRegEx = Pattern.compile("^(M00-)[0-9]{3,4}$");
     Pattern machineNameRegEx = Pattern.compile("^[A-z ]{3,30}$");
     Pattern machineQtyRegEx = Pattern.compile("^[0-9]{1,3}$");
-    Pattern machineModelRegEx = Pattern.compile("^0[0-9][0-9]?(-)?[0-9]{7}$");
+    Pattern machineModelRegEx = Pattern.compile("^([A-Z]{3})?|([-a-z]{2,4})|([0-9]{3})$");
 
     public void initialize() {
         btnAddMachine.setDisable(true);

@@ -23,7 +23,7 @@ public class AddExpenseFormController {
     public JFXTextField txtExpenseAmount;
     public JFXButton btnAddExp;
     LinkedHashMap<TextField, Pattern> map=new LinkedHashMap<>();
-    Pattern expenseIDRegEx = Pattern.compile("^(E00-)[0-9]{3,4}$");
+    Pattern expenseIDRegEx = Pattern.compile("^(EX00-)[0-9]{3,4}$");
     Pattern expenseTypeRegEx = Pattern.compile("^[A-z ]{3,20}$");
     Pattern expenseAmountRegEx = Pattern.compile("^[1-9][0-9]*([.][0-9]{2})?$");
 

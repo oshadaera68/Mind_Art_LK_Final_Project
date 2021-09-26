@@ -1,24 +1,40 @@
 package controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import db.DbConnection;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.stage.Stage;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import model.Supplier;
+import util.ValidationUtil;
 
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedHashMap;
+import java.util.regex.Pattern;
 
 public class SearchSupplierFormController {
     public JFXTextField txtId;
     public JFXTextField txtName;
     public JFXTextField txtAddress;
     public JFXTextField txtTeleNo;
+    public JFXButton btnSearch;
+
+    LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
+    Pattern idSupplierDeleteRegEx = Pattern.compile("^(S00-)[0-9]{3,4}$");
+
+    public void initialize() {
+        storeValidate();
+        btnSearch.setDisable(true);
+    }
+
+    private void storeValidate() {
+        map.put(txtId, idSupplierDeleteRegEx);
+    }
 
     public void searchSupplierOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
 
@@ -30,7 +46,7 @@ public class SearchSupplierFormController {
         ResultSet rst = stm.executeQuery();
 
         if (rst.next()) {
-            Supplier s1= new Supplier(
+            Supplier s1 = new Supplier(
                     rst.getString(1),
                     rst.getString(2),
                     rst.getString(3),
@@ -43,17 +59,23 @@ public class SearchSupplierFormController {
         }
     }
 
-    void setData(Supplier s){
+    void setData(Supplier s) {
         txtId.setText(s.getSupplierID());
         txtName.setText(s.getSupplierName());
         txtAddress.setText(s.getSupplierAddress());
         txtTeleNo.setText(s.getTelNo());
     }
 
-    public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/MainForm.fxml"))));
-        stage.setTitle("Timber Mill Management System - Ver 0.1.0");
-        stage.show();
+    public void txtFieldKeyRelease(KeyEvent keyEvent) {
+        Object response = ValidationUtil.validate(map, btnSearch);
+
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+            if (response instanceof TextField) {
+                TextField errorText = (TextField) response;
+                errorText.requestFocus();
+            } else if (response instanceof Boolean) {
+                new Alert(Alert.AlertType.INFORMATION, "Aded").showAndWait();
+            }
+        }
     }
 }

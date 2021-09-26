@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="634.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MachineryFormController">
+   <children>
+      <AnchorPane prefHeight="649.0" prefWidth="293.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <ImageView fitHeight="142.0" fitWidth="128.0" layoutX="75.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-grinding-machine-48.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="30.0" layoutY="171.0" text="Machinery Section" textFill="#554beb">
+               <font>
+                  <Font name="Behind The Scenery" size="33.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="75.0" layoutY="269.0" onAction="#addMachineOnAction" prefHeight="31.0" prefWidth="144.0" style="-fx-background-color: #0984e3;" text="Add Machine" textFill="WHITE" />
+            <JFXButton layoutX="75.0" layoutY="400.0" onAction="#deleteMachineOnAction" prefHeight="31.0" prefWidth="144.0" style="-fx-background-color: #e74c3c;" text="Delete Machine" textFill="WHITE" />
+            <JFXButton layoutX="74.0" layoutY="334.0" onAction="#searchMachineOnAction" prefHeight="31.0" prefWidth="144.0" style="-fx-background-color: #9b59b6;" text="Search Machine" textFill="WHITE" />
+            <JFXButton layoutX="74.0" layoutY="464.0" onAction="#selectAllMachineOnAction" prefHeight="31.0" prefWidth="144.0" style="-fx-background-color: #27ae60;" text="Select All Machine" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="context" layoutX="293.0" prefHeight="649.0" prefWidth="812.0" />
+   </children>
+</AnchorPane>

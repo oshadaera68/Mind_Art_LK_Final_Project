@@ -1,18 +1,38 @@
 package controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import db.DbConnection;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import model.WoodType;
+import util.ValidationUtil;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedHashMap;
+import java.util.regex.Pattern;
 
 public class DeleteWoodTypeFormController {
     public JFXTextField txtWoodTypeID;
     public JFXTextField txtWoodName;
+    public JFXButton btnDelWood;
+
+    LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
+    Pattern idWoodDeleteRegEx = Pattern.compile("^(W00-)[0-9]{3,4}$");
+
+    public void initialize(){
+     storeValidate();
+     btnDelWood.setDisable(true);
+    }
+
+    private void storeValidate() {
+        map.put(txtWoodTypeID,idWoodDeleteRegEx);
+    }
 
     public void deleteWoodOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         if (delete(txtWoodTypeID.getText())){
@@ -20,7 +40,6 @@ public class DeleteWoodTypeFormController {
         }else{
             new Alert(Alert.AlertType.WARNING, "Try Again").show();
         }
-
     }
 
     public void searchID(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
@@ -48,6 +67,19 @@ public class DeleteWoodTypeFormController {
             return true;
         }else{
             return false;
+        }
+    }
+
+    public void txtFieldKeyRelease(KeyEvent keyEvent) {
+        Object response = ValidationUtil.validate(map, btnDelWood);
+
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+            if (response instanceof TextField) {
+                TextField errorText = (TextField) response;
+                errorText.requestFocus();
+            } else if (response instanceof Boolean) {
+                new Alert(Alert.AlertType.INFORMATION, "Aded").showAndWait();
+            }
         }
     }
 }

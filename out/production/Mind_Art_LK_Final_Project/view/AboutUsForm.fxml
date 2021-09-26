@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="aboutUsView" prefHeight="400.0" prefWidth="618.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AboutUsController">
+   <children>
+      <JFXButton layoutX="494.0" layoutY="341.0" onAction="#exitOnAction" prefHeight="37.0" prefWidth="89.0" style="-fx-background-color: #e74c3c;" text="Exit" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="50.0" layoutY="23.0" text="About Us">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutX="133.0" layoutY="35.0" prefHeight="0.0" prefWidth="457.0" />
+      <Label layoutX="50.0" layoutY="89.0" text="Product Name:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="167.0" layoutY="89.0" prefHeight="25.0" prefWidth="255.0" text="Timber Mill Management System">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="132.0" text="Product Version:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="180.0" layoutY="134.0" text="v0.1.0">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="175.0" text="Product Released:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="190.0" layoutY="176.0" text="2021/09/12">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="353.0" text="CopyRight (c) By 2021, MIND ART LK. " textFill="#f20f0f">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="217.0" text="Operating System:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="193.0" layoutY="219.0" text="Windows 10, x64bit system, 10.0">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
