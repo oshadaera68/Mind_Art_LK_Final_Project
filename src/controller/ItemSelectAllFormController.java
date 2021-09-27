@@ -23,6 +23,10 @@ public class ItemSelectAllFormController {
 
     public void initialize() {
         try {
+            colCode.setStyle("-fx-alignment:CENTER;");
+            colName.setStyle("-fx-alignment:CENTER;");
+            colQty.setStyle("-fx-alignment:CENTER");
+            colUnitPrice.setStyle("-fx-alignment:CENTER");
 
             colCode.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
             colName.setCellValueFactory(new PropertyValueFactory<>("itemName"));

@@ -23,6 +23,10 @@ public class EmployeeSelectAllFormController {
 
     public void initialize() {
         try {
+            colEmpID.setStyle("-fx-alignment:CENTER;");
+            colEmpName.setStyle("-fx-alignment:CENTER;");
+            colAddress.setStyle("-fx-alignment:CENTER");
+            colTeleNo.setStyle("-fx-alignment:CENTER");
 
             colEmpID.setCellValueFactory(new PropertyValueFactory<>("empId"));
             colEmpName.setCellValueFactory(new PropertyValueFactory<>("empName"));
