@@ -9,8 +9,6 @@ J
 src/view/Tm/ExpenseTm.java,f\e\fe092787ceb6f07bbd1227f02d80129b402a2c5c
 R
 "src/view/SelectAllExpenseForm.fxml,5\c\5c7b05bc76602e79942b4056bf5031e9191fb9dd
-b
-2src/controller/SelectAllExpenseFormController.java,2\b\2b788b7d44ec2adfe0112325ddf0e0b6e89a95fc
 P
  src/view/SupplierDetailForm.fxml,d\0\d034e6fde553c1c3544854d8b834e6bb4cc98be6
 J
@@ -33,12 +31,6 @@ S
 #src/controller/CustomerService.java,f\8\f8ba1e56efa4b66ed5b2714d01e81c877213bef5
 c
 3src/controller/CustomerSelectAllFormController.java,4\7\47dddb744f357fa230f1a7afca518a685606513f
-c
-3src/controller/SelectAllWoodTypeFormController.java,4\e\4e506438b3703724cef71f3104f53ee38d27e176
-c
-3src/controller/SelectAllSupplierFormController.java,e\7\e7897ee5b42073dc25a3d199e3993d40a098f640
-c
-3src/controller/SupplierSelectAllFormController.java,0\3\03d6d891bd0651cfd4d6df73472877c7bf729d5c
 \
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
 F
@@ -51,8 +43,6 @@ K
 src/view/MachineryForm.fxml,d\f\df58a764a9480314ea4f7e6a99299188db11ec22
 ]
 -src/controller/EmployeePaymentController.java,d\5\d59177ec4cb09ddc14cb1ffe25ab67c371c766cd
-G
-src/view/OrderForm.fxml,7\f\7f4c89015f85ffb535bbb47a65d54af7b80f25da
 >
 src/script.sql,8\f\8fabe3755e1ead5799c15bb382666c6712f45baa
 M
@@ -83,8 +73,6 @@ P
  src/view/CustomerSearchForm.fxml,1\5\15c015e6e1e30d65e0de5d8e2859ab796904127d
 F
 src/view/MainForm.fxml,2\d\2dfb45a09f3445634b425a5c4d3636ae02028f52
-D
-src/model/Order.java,d\5\d5c9715ba2aaeb7cf89d6b5292bfb85c292d1d12
 S
 #src/controller/OrderController.java,3\1\310073a474c0c517aea5b1a490dd93c26aee7118
 _
@@ -109,3 +97,79 @@ L
 src/util/ValidationUtil.java,9\7\97bf2fca213e1d5f49ae2ac0720ee54269a28ab5
 G
 src/AppInitializer.java,5\8\580cc932433633b711bc392ae543e0f12b1bae87
+`
+0src/controller/SupplierDetailFormController.java,f\a\fa69f1ff32161b24730a5a6bd5ea1bf327cfe334
+P
+ src/view/DeleteCustomerForm.fxml,b\b\bb9d7416bc502a5b08f42f4e883f48b915c4e948
+P
+ src/view/DeleteEmployeeForm.fxml,9\e\9e57c9db965f1c9dcba8092125831af8c9edcff7
+`
+0src/controller/DeleteCustomerFormController.java,2\0\202a19740cdc1b4f136e861be8caf989ab3eff96
+\
+,src/controller/AddExpenseFormController.java,f\3\f342464a76a38a0e2f6f40328dd067b4bc6d00f2
+O
+src/view/DeleteExpenseForm.fxml,8\6\864349dcbe5826101c70526771f4a52c0cc5b81a
+L
+src/view/DeleteItemForm.fxml,2\7\276f84da0d41672546ed028c15f8806806682a60
+`
+0src/controller/DeleteEmployeeFormController.java,7\b\7b0a3a3fad5bf658bb259ba35d14e7bb86d83cdc
+R
+"src/controller/ItemController.java,0\8\086c1b5baea0abca5ef04d03edacb12335e49190
+\
+,src/controller/DeleteItemFormController.java,2\1\215cf20a3b851f15c5325d652c686ba0e419bf2a
+\
+,src/controller/AddMachineFormController.java,a\a\aa797a04121d8a263643f7621276d4d188b8606f
+_
+/src/controller/DeleteMachineFormController.java,2\e\2e732a73e5976071d909d253e1e4ce5e28cb9c10
+O
+src/view/DeleteMachineForm.fxml,3\a\3ae84eb143979a4c33c09d559fdbf51615e7342e
+V
+&src/view/DeleteSupplierDetailForm.fxml,5\5\55d5a617c5d5ca295f333555778532907aebdbd1
+P
+ src/view/DeleteSupplierForm.fxml,1\5\152cd7628a37c815a9db8faabd8b3b92ec120e00
+f
+6src/controller/DeleteSupplierDetailFormController.java,f\2\f2202ecd8daf5572e06473f06f1011d5c4d4b68b
+_
+/src/controller/DeleteExpenseFormController.java,2\2\22d00b6fd5f818f33c1fdb30dfad6a3c795e529c
+U
+%src/view/DeleteSupplierOrderForm.fxml,3\d\3d3b8cc4c8525142f897bccab1a1af497bb04f08
+e
+5src/controller/DeleteSupplierOrderFormController.java,9\8\980b70793b6a1dc874c985ec109dfe4defb38054
+`
+0src/controller/DeleteWoodTypeFormController.java,c\0\c0c4a5a1db37f6744fd84e2d916db0e7f67b6b6a
+P
+ src/view/DeleteWoodTypeForm.fxml,2\6\26972d86fd956c90a3e4c26e32e8938f27cbf933
+`
+0src/controller/DeleteSupplierFormController.java,8\a\8af75d88aae9f7b20326c734e55688f206da85db
+O
+src/view/SearchMachineForm.fxml,f\1\f1408b7ce31261f3c738ab3bd82fe5c4d2476604
+_
+/src/controller/MachineSearchFormController.java,3\8\3804cf3e6cdd8afe6e98c733d49b208964d8c80c
+\
+,src/controller/SearchItemFormController.java,5\a\5a09b0572751f7f98654a7480d8039a3c62ba28e
+`
+0src/controller/SearchEmployeeFormController.java,a\a\aaf8ef4ed3a1167ce19ef62c1cd7e98b7d305a9c
+G
+src/view/LogInForm.fxml,8\b\8b0809348c2fc65d5b648f24e8215d70a09d4dbc
+_
+/src/controller/SearchExpenseFormController.java,2\3\234e8ddc7c861a0f1cad68de278d64cb2637c873
+P
+ src/view/SearchSupplierForm.fxml,a\b\abb7ac769e9d9446411c063363ba7ff41675a6f5
+P
+ src/view/SearchEmployeeForm.fxml,7\0\709efcbc158fa583f4336173c38b9b0a3d0f9348
+L
+src/view/SearchItemForm.fxml,a\1\a14c2763fdcca109800e649fd8425893c12f6000
+O
+src/view/SearchExpenseForm.fxml,1\0\10c2eda47a28f598c35adca8b43eaf0293560a01
+U
+%src/view/SearchSupplierOrderForm.fxml,8\4\84a99f32c76d75709014d17542dfb7dc993b9b6e
+V
+&src/view/SearchSupplierDetailForm.fxml,d\a\da995e5336cf14ceb0cec6d82f5b5270735328fb
+f
+6src/controller/SearchSupplierDetailFormController.java,7\b\7bcb8316712dc57cf7e52cca5550a6aababe22ce
+w
+G.idea/sonarlint/issuestore/5/8/580cc932433633b711bc392ae543e0f12b1bae87,5\4\545e6c7a4b38e0f2f01df97c4296b55c09a4a404
+`
+0src/controller/SearchSupplierFormController.java,3\7\376ee230fc3740f85ece89644d8e330cd042deb6
+V
+&src/controller/MainFormController.java,c\4\c4a1575bb357ea11a251854ed5fcde4b44a91fb6

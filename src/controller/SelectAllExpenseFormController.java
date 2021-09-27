@@ -25,6 +25,10 @@ public class SelectAllExpenseFormController {
     public void initialize() {
         try {
 
+            colExpenseId.setStyle("-fx-alignment:CENTER;");
+            colExpenseType.setStyle("-fx-alignment:CENTER;");
+            colExpenseAmount.setStyle("-fx-alignment:CENTER");
+
             colExpenseId.setCellValueFactory(new PropertyValueFactory<>("id"));
             colExpenseType.setCellValueFactory(new PropertyValueFactory<>("type"));
             colExpenseAmount.setCellValueFactory(new PropertyValueFactory<>("amount"));

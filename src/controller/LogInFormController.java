@@ -25,21 +25,6 @@ public class LogInFormController {
     public JFXTextField txtUserName;
     public JFXPasswordField txtPasswordLog;
     public AnchorPane logInContext;
-    public JFXButton btnLogIn;
-
-    LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
-    Pattern userNameRegEx = Pattern.compile("^[a-z]{5}$");
-    Pattern passwordRegEx = Pattern.compile("^[0-9]{4}$");
-
-    public void initialize(){
-        btnLogIn.setDisable(true);
-        storeValidate();
-    }
-
-    private void storeValidate() {
-        map.put(txtUserName,userNameRegEx);
-        map.put(txtPasswordLog,passwordRegEx);
-    }
 
     public void dashBoardOnAction(ActionEvent actionEvent) throws IOException {
         String user = txtUserName.getText();
@@ -53,19 +38,6 @@ public class LogInFormController {
             window.show();
         } else {
             new Alert(Alert.AlertType.WARNING, "please enter the user name and password", ButtonType.OK).show();
-        }
-    }
-
-    public void txtFieldKeyRelease(KeyEvent keyEvent) {
-        Object response = ValidationUtil.validate(map, btnLogIn);
-
-        if (keyEvent.getCode() == KeyCode.ENTER) {
-            if (response instanceof TextField) {
-                TextField errorText = (TextField) response;
-                errorText.requestFocus();
-            } else if (response instanceof Boolean) {
-                new Alert(Alert.AlertType.INFORMATION, "Aded").showAndWait();
-            }
         }
     }
 }

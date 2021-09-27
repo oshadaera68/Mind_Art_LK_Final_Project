@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="624.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderFormController">
    <children>
-      <Label layoutX="416.0" layoutY="16.0" prefHeight="54.0" prefWidth="233.0" text="Place Order Form" textFill="#005ff8">
+      <Label layoutX="382.0" layoutY="14.0" prefHeight="54.0" prefWidth="233.0" text="Place Order Form" textFill="#005ff8">
          <font>
             <Font name="Behind The Scenery" size="35.0" />
          </font>

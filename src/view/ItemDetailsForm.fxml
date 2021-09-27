@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
 
+<AnchorPane prefHeight="672.0" prefWidth="929.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemDetailsFormController">
+   <children>
+      <TableView fx:id="tblOrderDetails" layoutX="14.0" layoutY="97.0" prefHeight="469.0" prefWidth="861.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="231.0" text="Item Code" />
+          <TableColumn fx:id="colQTY" prefWidth="316.0" text="QTY" />
+            <TableColumn fx:id="colPrice" prefWidth="313.0" text="Price" />
+        </columns>
+      </TableView>
+      <Label layoutX="34.0" layoutY="33.0" text="Order ID:" textFill="RED">
+         <font>
+            <Font name="Behind The Scenery" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="153.0" layoutY="49.0" text="O001" textFill="RED">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="700.0" layoutY="584.0" text="Total Cost:">
+         <font>
+            <Font name="Behind The Scenery" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalCost" layoutX="799.0" layoutY="584.0" text="Rs 45.00/=">
+         <font>
+            <Font name="Behind The Scenery" size="27.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

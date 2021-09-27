@@ -24,6 +24,11 @@ public class SelectAllSupplierDetailFormController {
     public void initialize() {
         try {
 
+            colSupId.setStyle("-fx-alignment:CENTER;");
+            colWoodTypeId.setStyle("-fx-alignment:CENTER;");
+            colQTY.setStyle("-fx-alignment:CENTER;");
+            colSize.setStyle("-fx-alignment:CENTER");
+
             colSupId.setCellValueFactory(new PropertyValueFactory<>("supplierOrderId"));
             colWoodTypeId.setCellValueFactory(new PropertyValueFactory<>("woodTypeId"));
             colQTY.setCellValueFactory(new PropertyValueFactory<>("QTY"));

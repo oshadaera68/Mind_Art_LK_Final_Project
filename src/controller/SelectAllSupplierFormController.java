@@ -23,6 +23,10 @@ public class SelectAllSupplierFormController {
     public void initialize() {
         try {
 
+            colID.setStyle("-fx-alignment:CENTER;");
+            colName.setStyle("-fx-alignment:CENTER;");
+            colDate.setStyle("-fx-alignment:CENTER");
+
             colID.setCellValueFactory(new PropertyValueFactory<>("supplierOrderID"));
             colName.setCellValueFactory(new PropertyValueFactory<>("supplierOrderName"));
             colDate.setCellValueFactory(new PropertyValueFactory<>("supplierOrderDate"));

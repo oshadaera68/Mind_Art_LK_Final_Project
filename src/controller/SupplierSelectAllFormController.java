@@ -24,6 +24,11 @@ public class SupplierSelectAllFormController {
     public void initialize() {
         try {
 
+            colSupplierID.setStyle("-fx-alignment:CENTER;");
+            colSupplierName.setStyle("-fx-alignment:CENTER;");
+            colSupplierAddress.setStyle("-fx-alignment:CENTER");
+            colTelNo.setStyle("-fx-alignment:CENTER");
+
             colSupplierID.setCellValueFactory(new PropertyValueFactory<>("supplierID"));
             colSupplierName.setCellValueFactory(new PropertyValueFactory<>("supplierName"));
             colSupplierAddress.setCellValueFactory(new PropertyValueFactory<>("supplierAddress"));
@@ -53,11 +58,10 @@ public class SupplierSelectAllFormController {
 
     private void setSuppliersToTable(ArrayList<Supplier> supplierArrayList) {
         ObservableList<SupplierTm> obList = FXCollections.observableArrayList();
-        supplierArrayList.forEach(e->{
+        supplierArrayList.forEach(e -> {
             obList.add(
-                    new SupplierTm(e.getSupplierID(),e.getSupplierName(),e.getSupplierAddress(),e.getTelNo()));
+                    new SupplierTm(e.getSupplierID(), e.getSupplierName(), e.getSupplierAddress(), e.getTelNo()));
         });
         tblSupplier.setItems(obList);
     }
-
 }

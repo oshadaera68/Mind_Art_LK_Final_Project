@@ -48,7 +48,6 @@ public class SearchWoodTypeFormController {
                     rst.getString(2)
             );
             setData(w1);
-
         } else {
             new Alert(Alert.AlertType.WARNING, "Empty Result Set").show();
         }

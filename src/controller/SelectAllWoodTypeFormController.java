@@ -22,6 +22,9 @@ public class SelectAllWoodTypeFormController {
     public void initialize() {
         try {
 
+            colId.setStyle("-fx-alignment:CENTER;");
+            colName.setStyle("-fx-alignment:CENTER;");
+
             colId.setCellValueFactory(new PropertyValueFactory<>("woodTypeID"));
             colName.setCellValueFactory(new PropertyValueFactory<>("woodName"));
 
