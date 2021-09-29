@@ -14,7 +14,7 @@ public class DatabaseAccessCode {
 
     public ArrayList<Order1> getAllOrders() throws SQLException, ClassNotFoundException {
         ArrayList<Order1> list = new ArrayList<>();
-        ResultSet rst = DbConnection.getInstance().getConnection().prepareStatement("SELECT c.CusID,c.CusName,o.OrderID,o.Date,o.Cost FROM Customer c JOIN Orders o ON o.CustomerID=c.CustomerID").executeQuery();
+        ResultSet rst = DbConnection.getInstance().getConnection().prepareStatement("SELECT c.CusID,c.CusName,o.OrderId,o.Date,o.Cost FROM Customer c JOIN Orders o ON o.customerId=c.cusId").executeQuery();
         while (rst.next()) {
             list.add(
               new Order1(

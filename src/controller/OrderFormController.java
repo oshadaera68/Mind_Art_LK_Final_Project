@@ -139,7 +139,7 @@ public class OrderFormController {
 
     private void loadDateAndTime() {
         Date date = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-dd");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         lblDate.setText(format.format(date));
 
         Timeline time = new Timeline(new KeyFrame(Duration.ZERO, e -> {
@@ -233,17 +233,21 @@ public class OrderFormController {
         Order order = new Order(
                 lblOrderId.getText(), cmbCustomerIds.getValue(), lblDate.getText(), lblTime.getText(), ttl, itemDetails
         );
+
         if (new OrderController().placeOrder(order)) {
-            URL resource = getClass().getResource("../view/PlaceOrderForm.fxml");
-            Parent load = FXMLLoader.load(resource);
-            Stage stage = new Stage();
-            stage.setScene(new Scene(load));
-            stage.setTitle("Order-customer all form");
-            stage.show();
             new Alert(Alert.AlertType.CONFIRMATION, "Success").show();
             setOrderId();
         } else {
             new Alert(Alert.AlertType.WARNING, "Try Again").show();
         }
+    }
+
+    public void salesOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/PlaceOrderForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(load));
+        stage.setTitle("Order-customer all form");
+        stage.show();
     }
 }

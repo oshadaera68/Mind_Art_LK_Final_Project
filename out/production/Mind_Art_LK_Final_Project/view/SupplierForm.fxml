@@ -7,29 +7,29 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="634.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierFormController">
+<AnchorPane prefHeight="710.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierFormController">
    <children>
-      <AnchorPane prefHeight="650.0" prefWidth="293.0" style="-fx-background-color: #bdc3c7;">
+      <AnchorPane prefHeight="710.0" prefWidth="256.0" style="-fx-background-color: #95a5a6;">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="59.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../asserts/supplier.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="50.0" layoutY="214.0" text="Supplier Section" textFill="WHITE">
+            <Label layoutX="31.0" layoutY="209.0" text="Supplier Section" textFill="WHITE">
                <font>
                   <Font name="Behind The Scenery" size="29.0" />
                </font>
             </Label>
-            <JFXButton layoutX="74.0" layoutY="282.0" onAction="#addSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #3498db;" text="Add Supplier" textFill="WHITE" />
-            <JFXButton layoutX="74.0" layoutY="336.0" onAction="#searchSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #27ae60;" text="Search Supplier" textFill="WHITE" />
-            <JFXButton layoutX="73.0" layoutY="391.0" onAction="#deleteSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #e74c3c;" text="Delete Supplier" textFill="WHITE" />
-            <JFXButton layoutX="72.0" layoutY="445.0" onAction="#supplierTableOnAction" style="-fx-background-color: #9b59b6;" text="All Supplier Table" textFill="WHITE" />
-            <JFXButton layoutX="71.0" layoutY="499.0" onAction="#supplierOrderFormOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #e67e22;" text="Supplier Order" textFill="WHITE" />
-            <JFXButton layoutX="73.0" layoutY="553.0" onAction="#supplierDetailsOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #9c88ff;" text="Supplier Details" textFill="WHITE" />
-            <JFXButton layoutX="105.0" layoutY="602.0" onAction="#dashBoardOnAction" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #3498db;" text="Back" textFill="WHITE" />
+            <JFXButton layoutX="55.0" layoutY="269.0" onAction="#addSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #3498db;" text="Add Supplier" textFill="WHITE" />
+            <JFXButton layoutX="55.0" layoutY="317.0" onAction="#searchSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #27ae60;" text="Search Supplier" textFill="WHITE" />
+            <JFXButton layoutX="54.0" layoutY="412.0" onAction="#deleteSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #e74c3c;" text="Delete Supplier" textFill="WHITE" />
+            <JFXButton layoutX="53.0" layoutY="461.0" onAction="#supplierTableOnAction" style="-fx-background-color: #9b59b6;" text="All Supplier Table" textFill="WHITE" />
+            <JFXButton layoutX="52.0" layoutY="515.0" onAction="#supplierOrderFormOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #e67e22;" text="Supplier Order" textFill="WHITE" />
+            <JFXButton layoutX="54.0" layoutY="569.0" onAction="#supplierDetailsOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #9c88ff;" text="Supplier Details" textFill="WHITE" />
+            <JFXButton layoutX="55.0" layoutY="364.0" onAction="#updateSupplierOnAction" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #f39c12;" text="Update Supplier" textFill="WHITE" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="47.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/supplier.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="contexts" layoutX="293.0" layoutY="1.0" prefHeight="649.0" prefWidth="812.0" />
+      <AnchorPane fx:id="contexts" layoutX="255.0" prefHeight="710.0" prefWidth="806.0" />
    </children>
 </AnchorPane>

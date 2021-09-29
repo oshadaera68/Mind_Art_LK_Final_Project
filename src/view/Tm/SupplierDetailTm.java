@@ -4,9 +4,9 @@ public class SupplierDetailTm {
     private String SupplierOrderID;
     private String WoodTypeID;
     private int QTY;
-    private int Size;
+    private double Size;
 
-    public SupplierDetailTm() {
+    public SupplierDetailTm(String supplierOrderID, String woodTypeID, int qty, double size) {
     }
 
     public SupplierDetailTm(String supplierOrderID, String woodTypeID, int QTY, int size) {
@@ -40,7 +40,7 @@ public class SupplierDetailTm {
         this.QTY = QTY;
     }
 
-    public int getSize() {
+    public double getSize() {
         return Size;
     }
 

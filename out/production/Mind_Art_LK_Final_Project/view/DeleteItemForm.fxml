@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="649.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeleteItemFormController">
+<AnchorPane prefHeight="710.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeleteItemFormController">
    <children>
       <Label layoutX="40.0" layoutY="48.0" text="Delete Item Form" textFill="#5027f2">
          <font>
             <Font name="Behind The Scenery" size="29.0" />
          </font>
       </Label>
-      <Separator layoutX="226.0" layoutY="71.0" prefHeight="2.0" prefWidth="571.0" />
+      <Separator layoutX="226.0" layoutY="71.0" prefHeight="0.0" prefWidth="505.0" />
       <Label layoutX="126.0" layoutY="160.0" text="Item Code:">
          <font>
             <Font size="23.0" />

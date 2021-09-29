@@ -25,14 +25,14 @@ public class MachineSearchFormController {
     public JFXButton btnSearch;
 
     LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
-    Pattern searchMachineRegEx = Pattern.compile("^(C00-)[0-9]{3,4}$");
+    Pattern searchMachineRegEx = Pattern.compile("^(M00-)[0-9]{3,4}$");
 
     public void initialize() {
         btnSearch.setDisable(true);
-        setValidate();
+        storeValidate();
     }
 
-    private void setValidate() {
+    private void storeValidate() {
         map.put(txtId, searchMachineRegEx);
     }
 

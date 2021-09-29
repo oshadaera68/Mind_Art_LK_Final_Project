@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="643.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerSelectAllFormController">
+<AnchorPane prefHeight="710.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerSelectAllFormController">
    <children>
-      <TableView fx:id="tblCusTable" layoutX="37.0" layoutY="104.0" prefHeight="465.0" prefWidth="747.0">
+      <TableView fx:id="tblCusTable" layoutX="31.0" layoutY="104.0" prefHeight="556.0" prefWidth="747.0">
         <columns>
           <TableColumn fx:id="colId" prefWidth="160.0" text="ID" />
           <TableColumn fx:id="colName" prefWidth="188.0" text="Name" />

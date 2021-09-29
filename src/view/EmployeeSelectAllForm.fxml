@@ -7,21 +7,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="746.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeSelectAllFormController">
+<AnchorPane prefHeight="710.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeSelectAllFormController">
    <children>
-      <Label layoutX="371.0" layoutY="23.0" text="Employee Select All Form" textFill="#2451d7">
+      <Label layoutX="286.0" layoutY="14.0" text="Employee Select All Form" textFill="#2451d7">
          <font>
             <Font name="Behind The Scenery" size="28.0" />
          </font>
       </Label>
-      <Separator layoutX="25.0" layoutY="75.0" prefHeight="5.0" prefWidth="933.0" />
-      <TableView fx:id="tblEmployee" layoutX="39.0" layoutY="92.0" prefHeight="605.0" prefWidth="910.0">
-        <columns>
-          <TableColumn fx:id="colEmpID" prefWidth="199.0" text="Emp Id" />
-          <TableColumn fx:id="colEmpName" prefWidth="218.0" text="Emp Name" />
-            <TableColumn fx:id="colAddress" prefWidth="235.0" text="Address" />
-            <TableColumn fx:id="colTeleNo" prefWidth="257.0" text="TeleNo" />
-        </columns>
+      <Separator layoutX="222.0" layoutY="64.0" prefHeight="0.0" prefWidth="412.0" />
+      <TableView fx:id="tblEmployee" layoutX="72.0" layoutY="77.0" prefHeight="605.0" prefWidth="670.0">
+         <columns>
+            <TableColumn fx:id="colEmpID" prefWidth="149.0" text="Emp Id" />
+            <TableColumn fx:id="colEmpName" prefWidth="165.0" text="Emp Name" />
+            <TableColumn fx:id="colAddress" prefWidth="152.0" text="Address" />
+            <TableColumn fx:id="colTeleNo" prefWidth="204.0" text="TeleNo" />
+         </columns>
       </TableView>
    </children>
 </AnchorPane>

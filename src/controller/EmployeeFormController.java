@@ -37,11 +37,10 @@ public class EmployeeFormController {
     }
 
     public void employeePaymentFormOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/EmployeePaymentForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        Stage window = (Stage) context.getScene().getWindow();
-        window.setScene(new Scene(load));
-        window.setTitle("Employee Payment");
-        window.show();
+        loadUi("EmployeePaymentForm");
+    }
+
+    public void updateEmployeeOnAction(ActionEvent actionEvent) throws IOException {
+        loadUi("UpdateEmployeeForm");
     }
 }

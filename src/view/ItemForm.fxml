@@ -7,26 +7,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="634.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
+<AnchorPane prefHeight="710.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
    <children>
-      <AnchorPane prefHeight="650.0" prefWidth="293.0" style="-fx-background-color: #bdc3c7;">
-         <children>
-            <Label layoutX="82.0" layoutY="183.0" text="Item Section" textFill="#5d21e8">
-               <font>
-                  <Font name="Behind The Scenery" size="30.0" />
-               </font>
-            </Label>
-            <JFXButton layoutX="89.0" layoutY="272.0" onAction="#addItemOnAction" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #3498db;" text="Add Item" textFill="WHITE" />
-            <JFXButton layoutX="90.0" layoutY="329.0" onAction="#searchItemOnAction" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #9b59b6;" text="Search Item" textFill="WHITE" />
-            <JFXButton layoutX="89.0" layoutY="386.0" onAction="#deleteItemOnAction" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #e74c3c;" text="Delete Item" textFill="WHITE" />
-            <JFXButton layoutX="88.0" layoutY="442.0" onAction="#selectAllFormOnAction" style="-fx-background-color: #2ecc71;" text="Select All Item" textFill="WHITE" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../asserts/1234.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="context" layoutX="293.0" layoutY="1.0" prefHeight="649.0" prefWidth="812.0" />
+      <AnchorPane prefHeight="710.0" prefWidth="254.0" style="-fx-background-color: #95a5a6;" />
+      <AnchorPane fx:id="context" layoutX="256.0" prefHeight="710.0" prefWidth="806.0" />
+      <Label layoutX="76.0" layoutY="203.0" text="Item Section" textFill="#5d21e8">
+         <font>
+            <Font name="Behind The Scenery" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="83.0" layoutY="292.0" onAction="#addItemOnAction" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #3498db;" text="Add Item" textFill="WHITE" />
+      <JFXButton layoutX="85.0" layoutY="405.0" onAction="#searchItemOnAction" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #9b59b6;" text="Search Item" textFill="WHITE" />
+      <JFXButton layoutX="86.0" layoutY="465.0" onAction="#deleteItemOnAction" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #e74c3c;" text="Delete Item" textFill="WHITE" />
+      <JFXButton layoutX="87.0" layoutY="529.0" onAction="#selectAllFormOnAction" style="-fx-background-color: #2ecc71;" text="Select All Item" textFill="WHITE" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="69.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/1234.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="84.0" layoutY="345.0" onAction="#updateItemOnAction" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #00d2d3;" text="Update Item" textFill="WHITE" />
    </children>
 </AnchorPane>

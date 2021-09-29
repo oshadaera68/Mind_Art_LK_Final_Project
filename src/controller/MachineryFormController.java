@@ -33,4 +33,8 @@ public class MachineryFormController {
         context.getChildren().clear();
         context.getChildren().add(load);
     }
+
+    public void updateMachineOnAction(ActionEvent actionEvent) throws IOException {
+        loadUi("UpdateMachineryForm");
+    }
 }

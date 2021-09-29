@@ -29,7 +29,6 @@ public class MachineSelectAllFormController {
             colQty.setStyle("-fx-alignment:CENTER");
             colModel.setStyle("-fx-alignment:CENTER");
 
-
             colId.setCellValueFactory(new PropertyValueFactory<>("machineID"));
             colName.setCellValueFactory(new PropertyValueFactory<>("machineName"));
             colQty.setCellValueFactory(new PropertyValueFactory<>("machineQty"));

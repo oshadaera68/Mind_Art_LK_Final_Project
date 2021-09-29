@@ -22,6 +22,7 @@ public class AddCustomerFormController {
     public JFXTextField txtAddress;
     public JFXTextField txtTelp;
     public JFXButton btnAdd;
+
     LinkedHashMap<TextField,Pattern> map=new LinkedHashMap<>();
     Pattern cusIDRegEx = Pattern.compile("^(C00-)[0-9]{3,4}$");
     Pattern cusNameRegEx = Pattern.compile("^[A-z ]{3,20}$");

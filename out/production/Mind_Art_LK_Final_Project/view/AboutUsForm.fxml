@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="aboutUsView" prefHeight="400.0" prefWidth="618.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AboutUsController">
+<AnchorPane prefHeight="400.0" prefWidth="618.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AboutUsController">
    <children>
-      <JFXButton layoutX="494.0" layoutY="341.0" onAction="#exitOnAction" prefHeight="37.0" prefWidth="89.0" style="-fx-background-color: #e74c3c;" text="Exit" textFill="WHITE">
+      <JFXButton layoutX="494.0" layoutY="341.0" prefHeight="37.0" prefWidth="89.0" style="-fx-background-color: #e74c3c;" text="Exit" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>

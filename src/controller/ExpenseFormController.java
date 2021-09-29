@@ -33,4 +33,8 @@ public class ExpenseFormController {
         context.getChildren().clear();
         context.getChildren().add(load);
     }
+
+    public void updateExpenseOnAction(ActionEvent actionEvent) throws IOException {
+        loadUi("UpdateExpenseForm");
+    }
 }

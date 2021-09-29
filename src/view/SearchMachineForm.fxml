@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="649.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MachineSearchFormController">
+<AnchorPane prefHeight="710.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MachineSearchFormController">
    <children>
       <Label layoutX="36.0" layoutY="59.0" prefHeight="39.0" prefWidth="196.0" text="Search Machine From" textFill="#0718db">
          <font>
             <Font name="Behind The Scenery" size="25.0" />
          </font>
       </Label>
-      <Separator layoutX="248.0" layoutY="79.0" prefHeight="0.0" prefWidth="543.0" />
+      <Separator layoutX="248.0" layoutY="79.0" prefHeight="0.0" prefWidth="439.0" />
       <Label layoutX="76.0" layoutY="144.0" prefHeight="34.0" prefWidth="138.0" text="Machine ID:">
          <font>
             <Font size="23.0" />

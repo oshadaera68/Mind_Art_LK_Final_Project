@@ -4,12 +4,12 @@ public class SupplierDetail {
     private String SupplierOrderID;
     private String WoodTypeID;
     private int QTY;
-    private int Size;
+    private double Size;
 
     public SupplierDetail() {
     }
 
-    public SupplierDetail(String supplierOrderID, String woodTypeID, int QTY, int size) {
+    public SupplierDetail(String supplierOrderID, String woodTypeID, int QTY, double size) {
         SupplierOrderID = supplierOrderID;
         WoodTypeID = woodTypeID;
         this.QTY = QTY;
@@ -40,11 +40,11 @@ public class SupplierDetail {
         this.QTY = QTY;
     }
 
-    public int getSize() {
+    public double getSize() {
         return Size;
     }
 
-    public void setSize(int size) {
+    public void setSize(double size) {
         Size = size;
     }
 }

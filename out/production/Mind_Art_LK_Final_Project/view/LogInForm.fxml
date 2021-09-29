@@ -21,9 +21,9 @@
             <Image url="@../asserts/icon-5359553_1280.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="498.0" layoutY="185.0" promptText="username" />
-      <JFXButton fx:id="btnLogIn" layoutX="625.0" layoutY="315.0" onAction="#dashBoardOnAction" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #9b59b6;" text="Log In" textFill="WHITE" />
-      <JFXPasswordField fx:id="txtPasswordLog" labelFloat="true" layoutX="497.0" layoutY="252.0" promptText="password" />
+      <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="498.0" layoutY="185.0" />
+      <JFXButton layoutX="625.0" layoutY="315.0" onAction="#dashBoardOnAction" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #9b59b6;" text="Log In" textFill="WHITE" />
+      <JFXPasswordField fx:id="txtPasswordLog" labelFloat="true" layoutX="497.0" layoutY="252.0" />
       <Label layoutX="466.0" layoutY="229.0" text="Password" textFill="#f80606" />
       <Label layoutX="467.0" layoutY="161.0" text="User Name" textFill="#f80606" />
       <AnchorPane prefHeight="370.0" prefWidth="398.0" style="-fx-background-color: #3498db;">
@@ -40,6 +40,5 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="397.0" prefHeight="370.0" prefWidth="323.0" />
    </children>
 </AnchorPane>

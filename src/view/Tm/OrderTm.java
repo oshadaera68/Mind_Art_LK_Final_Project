@@ -63,11 +63,11 @@ public class OrderTm {
     @Override
     public String toString() {
         return "OrderTm{" +
-                "cusId='" + cusId + '\'' +
-                ", cusName='" + cusName + '\'' +
-                ", orderId='" + orderId + '\'' +
-                ", orderDate='" + orderDate + '\'' +
-                ", totalCost=" + totalCost +
+                "cusId='" + getCusId() + '\'' +
+                ", cusName='" + getCusName() + '\'' +
+                ", orderId='" + getOrderId() + '\'' +
+                ", orderDate='" + getOrderDate() + '\'' +
+                ", totalCost=" + getTotalCost() +
                 '}';
     }
 

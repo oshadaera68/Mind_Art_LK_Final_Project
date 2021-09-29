@@ -71,15 +71,6 @@ public class SearchSupplierOrderFormController {
         txtDate.setText(supplierOrder.getDate());
     }
 
-    public void supplierOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SupplierOrderForm.fxml");
-        Parent load = FXMLLoader.load(resource);
-        Stage window = (Stage) searchContext.getScene().getWindow();
-        window.setScene(new Scene(load));
-        window.setTitle("Supplier Order Form");
-        window.show();
-    }
-
     public void txtFieldKeyRelease(KeyEvent keyEvent) {
         Object response = ValidationUtil.validate(map, btnSearch);
 

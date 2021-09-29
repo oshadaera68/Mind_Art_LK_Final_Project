@@ -1,5 +1,6 @@
 package controller;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +11,7 @@ import java.net.URL;
 
 public class CustomerFormController {
     public AnchorPane context;
+//    public JFXButton btnUpdate;
 
     public void customerAddOnAction(ActionEvent actionEvent) throws IOException {
         loadUi("AddCustomerForm");
@@ -32,5 +34,9 @@ public class CustomerFormController {
         Parent load = FXMLLoader.load(resource);
         context.getChildren().clear();
         context.getChildren().add(load);
+    }
+
+    public void updateFormOnAction(ActionEvent actionEvent) throws IOException {
+        loadUi("CustomerUpdateForm");
     }
 }

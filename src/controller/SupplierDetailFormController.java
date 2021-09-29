@@ -38,11 +38,15 @@ public class SupplierDetailFormController {
     }
 
     public void backStageOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("../view/SupplierForm.fxml");
+        URL resource = getClass().getResource("../view/MainForm.fxml");
         Parent load = FXMLLoader.load(resource);
         Stage window = (Stage) supplierContexts.getScene().getWindow();
         window.setScene(new Scene(load));
-        window.setTitle("Supplier Form");
+        window.setTitle("Timber Mill Management System - v0.1.0");
         window.show();
+    }
+
+    public void updateSupplierDetaliOnAction(ActionEvent actionEvent) throws IOException {
+        loadUi("UpdateSupplierDetailForm");
     }
 }

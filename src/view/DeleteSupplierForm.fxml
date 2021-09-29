@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="649.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeleteSupplierFormController">
+<AnchorPane prefHeight="710.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeleteSupplierFormController">
    <children>
       <Label layoutX="53.0" layoutY="60.0" prefHeight="39.0" prefWidth="196.0" text="Delete Supplier Form" textFill="#0718db">
          <font>
             <Font name="Behind The Scenery" size="25.0" />
          </font>
       </Label>
-      <Separator layoutX="254.0" layoutY="79.0" prefHeight="0.0" prefWidth="543.0" />
+      <Separator layoutX="254.0" layoutY="79.0" prefHeight="2.0" prefWidth="500.0" />
       <Label layoutX="82.0" layoutY="157.0" prefHeight="34.0" prefWidth="138.0" text="Supplier ID:">
          <font>
             <Font size="23.0" />
@@ -39,6 +39,6 @@
          </font>
       </Label>
       <JFXTextField fx:id="txtTeleNo" layoutX="299.0" layoutY="431.0" prefHeight="31.0" prefWidth="375.0" />
-      <JFXButton fx:id="btnSup" layoutX="509.0" layoutY="574.0" onAction="#deleteSupplierOnAction" prefHeight="31.0" prefWidth="245.0" style="-fx-background-color: #0984e3;" text="Delete" textFill="WHITE" />
+      <JFXButton fx:id="btnSup" layoutX="509.0" layoutY="566.0" onAction="#deleteSupplierOnAction" prefHeight="31.0" prefWidth="245.0" style="-fx-background-color: #0984e3;" text="Delete" textFill="WHITE" />
    </children>
 </AnchorPane>

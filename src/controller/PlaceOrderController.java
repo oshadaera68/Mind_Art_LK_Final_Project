@@ -25,6 +25,13 @@ public class PlaceOrderController {
     public TableColumn colTotalCost;
 
     public void initialize(){
+
+        colCusID.setStyle("-fx-alignment:CENTER;");
+        colCusName.setStyle("-fx-alignment:CENTER;");
+        colOrderId.setStyle("-fx-alignment:CENTER");
+        colOrderDate.setStyle("-fx-alignment:CENTER");
+        colTotalCost.setStyle("-fx-alignment:CENTER");
+
         colCusID.setCellValueFactory(new PropertyValueFactory<>("cusId"));
         colCusName.setCellValueFactory(new PropertyValueFactory<>("cusName"));
         colOrderId.setCellValueFactory(new PropertyValueFactory<>("orderId"));
@@ -33,7 +40,6 @@ public class PlaceOrderController {
         try {
 
             loadAllData();
-
 
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -45,7 +51,6 @@ public class PlaceOrderController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         });
     }
 
@@ -61,8 +66,8 @@ public class PlaceOrderController {
 
     private void loadAllData() throws SQLException, ClassNotFoundException {
         ObservableList <OrderTm> list = FXCollections.observableArrayList();
-        for (Order1 tempOrder1:new DatabaseAccessCode().getAllOrders()) {
-            list.add(new OrderTm(tempOrder1.getCusId(), tempOrder1.getCusName(),tempOrder1.getOrderId(), tempOrder1.getOrderDate(), tempOrder1.getTotalCost()));
+        for (Order1 tempOrder:new DatabaseAccessCode().getAllOrders()) {
+            list.add(new OrderTm(tempOrder.getCusId(), tempOrder.getCusName(),tempOrder.getOrderId(), tempOrder.getOrderDate(), tempOrder.getTotalCost()));
         }
     }
 }

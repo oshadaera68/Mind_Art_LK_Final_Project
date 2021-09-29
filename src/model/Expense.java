@@ -11,7 +11,7 @@ public class Expense {
         this.amount = amount;
     }
 
-    public Expense() {
+    public Expense(String text, String txtExpenseTypeText, String txtExpenseAmountText) {
     }
 
     public String getId() {

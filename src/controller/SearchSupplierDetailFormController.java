@@ -28,7 +28,6 @@ public class SearchSupplierDetailFormController {
     LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
     Pattern idSupplierDetailDeleteRegEx = Pattern.compile("^(S00-)[0-9]{3,4}$");
 
-
     public void initialize() {
         btnSearch.setDisable(true);
         storeValidate();
@@ -51,7 +50,7 @@ public class SearchSupplierDetailFormController {
                     rst.getString(1),
                     rst.getString(2),
                     rst.getInt(3),
-                    rst.getInt(4)
+                    rst.getDouble(4)
             );
             setData(s1);
 

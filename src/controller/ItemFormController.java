@@ -33,4 +33,8 @@ public class ItemFormController {
         context.getChildren().clear();
         context.getChildren().add(load);
     }
+
+    public void updateItemOnAction(ActionEvent actionEvent) throws IOException {
+        loadUi("UpdateItemForm");
+    }
 }

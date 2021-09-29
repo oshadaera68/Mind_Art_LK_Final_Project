@@ -38,7 +38,7 @@ public class AddSupplierDetailFormController {
     public void addOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         SupplierDetail s1 = new SupplierDetail(
                 txtSupID.getText(), txtWoodId.getText(),
-                Integer.getInteger(txtQty.getText()), Integer.getInteger(txtSize.getText())
+                Integer.getInteger(txtQty.getText()),Double.parseDouble(txtSize.getText())
         );
 
         if (saveSupplierDetail(s1))

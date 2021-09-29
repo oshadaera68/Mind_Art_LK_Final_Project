@@ -20,7 +20,7 @@ public class ItemController {
     }
 
     public Item getItem(String id) throws SQLException, ClassNotFoundException {
-        ResultSet rst = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Item WHERE ItemCode='" + id + "'").executeQuery();
+        ResultSet rst = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Item WHERE itemCode='" + id + "'").executeQuery();
         if (rst.next()){
             return new Item(
                     rst.getString(1),

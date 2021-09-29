@@ -45,7 +45,7 @@ public class DeleteSupplierDetailFormController {
                     rst.getString(1),
                     rst.getString(2),
                     rst.getInt(3),
-                    rst.getInt(4)
+                    rst.getDouble(4)
             );
             setData(s1);
         }else{

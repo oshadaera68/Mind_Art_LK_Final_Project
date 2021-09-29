@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="addContext" prefHeight="649.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddSupplierOrderFormController">
+<AnchorPane fx:id="addContext" prefHeight="710.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddSupplierOrderFormController">
    <children>
       <Label layoutX="24.0" layoutY="32.0" text="Add Supplier Order Form" textFill="#3b1cff">
          <font>
@@ -33,7 +33,6 @@
          </font>
       </Label>
       <JFXTextField fx:id="txtDate" layoutX="317.0" layoutY="420.0" onKeyReleased="#textFieldKeyRelease" prefHeight="31.0" prefWidth="424.0" />
-      <JFXButton fx:id="btnAddSupOrder" layoutX="459.0" layoutY="540.0" onAction="#addSupplierOrderOnAction" prefHeight="31.0" prefWidth="106.0" style="-fx-background-color: #2980b9;" text="Add" textFill="WHITE" />
-      <JFXButton layoutX="608.0" layoutY="540.0" onAction="#supplierOnAction" prefHeight="31.0" prefWidth="106.0" style="-fx-background-color: #e74c3c;" text="Cancel" textFill="WHITE" />
+      <JFXButton fx:id="btnAddSupOrder" layoutX="459.0" layoutY="540.0" onAction="#addSupplierOrderOnAction" prefHeight="31.0" prefWidth="240.0" style="-fx-background-color: #2980b9;" text="Add" textFill="WHITE" />
    </children>
 </AnchorPane>

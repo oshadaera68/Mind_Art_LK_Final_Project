@@ -33,4 +33,8 @@ public class WoodTypeFormController {
         context.getChildren().clear();
         context.getChildren().add(load);
     }
+
+    public void updateWoodTypeOnAction(ActionEvent actionEvent) throws IOException {
+        loadUi("UpdateWoodTypeForm");
+    }
 }
