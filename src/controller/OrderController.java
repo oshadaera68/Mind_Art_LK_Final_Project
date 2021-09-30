@@ -65,10 +65,11 @@ public class OrderController {
 
     private boolean saveOrderDetail(String orderId, ArrayList<ItemDetails> itemDetails) throws SQLException, ClassNotFoundException {
         for (ItemDetails temp : itemDetails) {
-            PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("INSERT INTO OrderDetails(ItemCode,OrderID,Qty) VALUES (?,?,?)");
+            PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("INSERT INTO OrderDetails(ItemCode,OrderID,Qty,price) VALUES (?,?,?,?)");
             stm.setObject(1, temp.getItemCode());
             stm.setObject(2, orderId);
             stm.setObject(3, temp.getQtyForSell());
+            stm.setObject(4,temp.getUnitPrice());
 
             if (stm.executeUpdate() > 0) {
                 if (updateQty(temp.getItemCode(), temp.getQtyForSell())) {

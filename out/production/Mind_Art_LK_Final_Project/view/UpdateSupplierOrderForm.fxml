@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="649.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateSupplierOrderFormController">
+   <children>
+      <Label layoutX="25.0" layoutY="52.0" text="Update Supplier Order Form" textFill="#3b1cff">
+         <font>
+            <Font name="Behind The Scenery" size="27.0" />
+         </font>
+      </Label>
+      <Separator layoutX="320.0" layoutY="73.0" prefHeight="0.0" prefWidth="474.0" />
+      <Label layoutX="79.0" layoutY="167.0" text="Supplier Order ID:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtID" layoutX="336.0" layoutY="169.0" onAction="#searchOrder" onKeyReleased="#txtFieldKeyRelease" prefHeight="31.0" prefWidth="424.0" />
+      <Label layoutX="75.0" layoutY="297.0" text="Supplier Order Name:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" layoutX="336.0" layoutY="301.0" prefHeight="31.0" prefWidth="424.0" />
+      <Label layoutX="76.0" layoutY="436.0" text="Supplier Order date:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtDate" layoutX="337.0" layoutY="440.0" prefHeight="31.0" prefWidth="424.0" />
+      <JFXButton fx:id="btnUpdate" layoutX="479.0" layoutY="560.0" onAction="#updateSupplierOrderOnAction" prefHeight="31.0" prefWidth="289.0" style="-fx-background-color: #2980b9;" text="Update" textFill="WHITE" />
+   </children>
+</AnchorPane>

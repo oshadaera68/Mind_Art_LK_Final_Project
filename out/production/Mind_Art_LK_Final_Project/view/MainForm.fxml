@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1249.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <BorderPane prefHeight="708.0" prefWidth="694.0">
+         <top>
+            <HBox prefHeight="58.0" prefWidth="694.0" style="-fx-background-color: #1e90ff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="58.0" prefWidth="190.0" text=" TMMS - v0.1.0" textFill="WHITE">
+                     <font>
+                        <Font name="Behind The Scenery" size="29.0" />
+                     </font>
+                  </Label>
+                  <Separator orientation="VERTICAL" prefHeight="38.0" prefWidth="2.0" />
+                  <Label prefHeight="58.0" prefWidth="58.0" text="Date:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDate" prefHeight="58.0" prefWidth="133.0" text="2021/09/21" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="208.0" layoutY="10.0" prefHeight="58.0" prefWidth="58.0" text="Time:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" layoutX="266.0" layoutY="10.0" prefHeight="58.0" prefWidth="121.0" text="10:21:12" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox alignment="TOP_CENTER" focusTraversable="true" prefHeight="746.0" prefWidth="192.0" snapToPixel="false" style="-fx-background-color: #1e90ff;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton onAction="#dashBoardOnAction" prefHeight="41.0" prefWidth="193.0" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/clipart343777.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="10.0" onAction="#customerOnAction" prefHeight="41.0" prefWidth="193.0" text="Customer" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/icons8-customer-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="71.0" onAction="#machineryOnAction" prefHeight="41.0" prefWidth="193.0" text="Machinery" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/icons8-grinding-machine-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="132.0" onAction="#itemsOnAction" prefHeight="41.0" prefWidth="193.0" text="Items" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/145280-200.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="193.0" onAction="#expenseOnAction" prefHeight="41.0" prefWidth="193.0" text="Expense" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/2449110-200.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="254.0" onAction="#employeeOnAction" prefHeight="41.0" prefWidth="193.0" text="Employee" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="53.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/employee-icon-10.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="315.0" onAction="#supplierOnAction" prefHeight="41.0" prefWidth="193.0" text="Supplier" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/supplier-8-899150.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="376.0" onAction="#woodTypesOnAction" prefHeight="41.0" prefWidth="193.0" text="Wood Types" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/wood1.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="409.0" onAction="#placeOrderOnAction" prefHeight="41.0" prefWidth="193.0" ripplerFill="#fffefe" text="Place Order" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/order-icon-png-13.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="466.0" onAction="#reportsOnAction" prefHeight="41.0" prefWidth="193.0" ripplerFill="#fffefe" text="Reports" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/icons8-business-report-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Separator prefWidth="200.0" />
+                  <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="523.0" onAction="#aboutUsOnAction" prefHeight="41.0" prefWidth="193.0" ripplerFill="#fffefe" text="About Us" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/icons8-about-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="583.0" onAction="#logOutOnAction" prefHeight="41.0" prefWidth="193.0" ripplerFill="#fffefe" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/icons8-exit-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <StackPane fx:id="context" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

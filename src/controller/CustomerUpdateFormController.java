@@ -26,6 +26,10 @@ public class CustomerUpdateFormController {
 
     LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
     Pattern cusIDRegEx = Pattern.compile("^(C00-)[0-9]{3,4}$");
+    Pattern cusNameRegEx = Pattern.compile("^[A-z ]{3,20}$");
+    Pattern cusAddressRegEx = Pattern.compile("^[A-z0-9/ ]{6,30}$");
+    Pattern cusTelephoneRegEx = Pattern.compile("^0[0-9][0-9]?(-)?[0-9]{7}$");
+
 
     public void initialize() {
         btnUpdate.setDisable(true);
@@ -33,7 +37,10 @@ public class CustomerUpdateFormController {
     }
 
     private void storeValidate() {
-        map.put(txtId, cusIDRegEx);
+        map.put(txtId,cusIDRegEx);
+        map.put(txtName,cusNameRegEx);
+        map.put(txtAddress,cusAddressRegEx);
+        map.put(txtTel,cusTelephoneRegEx);
     }
 
     public void textFieldKeyRelease(KeyEvent keyEvent) {
@@ -63,7 +70,7 @@ public class CustomerUpdateFormController {
     }
 
     boolean update(Customer c) throws SQLException, ClassNotFoundException {
-        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("UPDATE Customer SET cusName=?, cusAddress=?, cusTeleNo=? WHERE cusId=?");
+        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("UPDATE Customer SET cusName=?, cusAddress=?, cusTelNo=? WHERE cusId=?");
         stm.setObject(1, c.getCusName());
         stm.setObject(2, c.getCusAddress());
         stm.setObject(3, c.getCusTelNo());

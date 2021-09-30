@@ -25,6 +25,8 @@ public class UpdateExpenseFormController {
 
     LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
     Pattern expenseIDRegEx = Pattern.compile("^(EX00-)[0-9]{3,4}$");
+    Pattern expenseTypeRegEx = Pattern.compile("^[A-z ]{3,20}$");
+    Pattern expenseAmountRegEx = Pattern.compile("^[1-9][0-9]*([.][0-9]{2})?$");
 
     public void initialize() {
         btnUpdateExpense.setDisable(true);
@@ -33,6 +35,8 @@ public class UpdateExpenseFormController {
 
     private void storeValidate() {
         map.put(txtExpenseID, expenseIDRegEx);
+        map.put(txtExpenseType,expenseTypeRegEx);
+        map.put(txtExpenseAmount,expenseAmountRegEx);
     }
 
     public void searchExpense(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {

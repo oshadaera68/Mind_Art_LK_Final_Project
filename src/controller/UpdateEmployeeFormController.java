@@ -26,6 +26,9 @@ public class UpdateEmployeeFormController {
 
     LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
     Pattern deleteEmpIdRegEx = Pattern.compile("^(E00-)[0-9]{3,4}$");
+    Pattern empNameRegEx = Pattern.compile("^[A-z ]{3,20}$");
+    Pattern empAddressRegEx = Pattern.compile("^[A-z0-9/ ]{6,30}$");
+    Pattern empTelephoneRegEx = Pattern.compile("^0[0-9][0-9]?(-)?[0-9]{7}$");
 
     public void initialize() {
         btnUpdateEmp.setDisable(true);
@@ -34,6 +37,9 @@ public class UpdateEmployeeFormController {
 
     private void storeValidate() {
         map.put(txtID, deleteEmpIdRegEx);
+        map.put(txtName,empNameRegEx);
+        map.put(txtAddress,empAddressRegEx);
+        map.put(txtTelephone,empTelephoneRegEx);
     }
 
     public void searchEmployeeOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {

@@ -2,6 +2,7 @@ package controller;
 
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import db.DbConnection;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -16,12 +17,17 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import model.Customer;
 import model.Item;
 import model.ItemDetails;
 import model.Order;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
 import view.Tm.CartTm;
 
 import java.io.IOException;
@@ -31,6 +37,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 public class OrderFormController {
@@ -249,5 +256,30 @@ public class OrderFormController {
         stage.setScene(new Scene(load));
         stage.setTitle("Order-customer all form");
         stage.show();
+    }
+
+    public void printBillOnAction(MouseEvent mouseEvent) {
+        try {
+            JasperDesign load = JRXmlLoader.load(getClass().getResourceAsStream("../view/report/Bill.jrxml"));
+            JasperReport jasperReport = JasperCompileManager.compileReport(load);
+
+            String itemName = txtItemName.getText();
+            String OrderId = lblOrderId.getText();
+            int qty = Integer.parseInt(txtQty.getText());
+            int qtyOnHand = Integer.parseInt(txtQtyOnHand.getText());
+            double unitPrice = Double.parseDouble(txtUnitPrice.getText());
+
+           HashMap map = new HashMap();
+           map.put("ItemName",itemName);
+           map.put("OrderId",OrderId);
+           map.put("Qty",qty);
+           map.put("QtyOnHand",qtyOnHand);
+           map.put("UnitPrice",unitPrice);
+
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map, new JREmptyDataSource());
+            JasperViewer.viewReport(jasperPrint,false);
+        } catch (JRException e) {
+            e.printStackTrace();
+        }
     }
 }

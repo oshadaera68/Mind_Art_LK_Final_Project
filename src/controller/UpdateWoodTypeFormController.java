@@ -24,6 +24,7 @@ public class UpdateWoodTypeFormController {
 
     LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
     Pattern updateWoodTypeRegEx = Pattern.compile("^(W00-)[0-9]{3,4}$");
+    Pattern woodNameRegEx = Pattern.compile("^[A-z ]{3,20}$");
 
     public void initialize(){
         btnUpdate.setDisable(true);
@@ -32,6 +33,7 @@ public class UpdateWoodTypeFormController {
 
     private void storeValidate() {
         map.put(txtWoodTypeID,updateWoodTypeRegEx);
+        map.put(txtWoodName, woodNameRegEx);
     }
 
     public void searchID(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {

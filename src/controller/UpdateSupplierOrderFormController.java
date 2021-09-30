@@ -25,6 +25,8 @@ public class UpdateSupplierOrderFormController {
 
     LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
     Pattern updateSupplierOrderIdRegEx = Pattern.compile("^(S00-)[0-9]{3,4}$");
+    Pattern supOrderNameRegEx = Pattern.compile("^(W00-)[0-9]{3,4}$");
+    Pattern supDateRegEx = Pattern.compile("^([0-9]{4}/[0-9]{2}/[0-9]{2})|([0-9]{4}.[0-9]{2}.[0-9]{2})$");
 
     public void initialize() {
         btnUpdate.setDisable(true);
@@ -33,6 +35,8 @@ public class UpdateSupplierOrderFormController {
 
     private void storeValidate() {
         map.put(txtID, updateSupplierOrderIdRegEx);
+        map.put(txtName, supOrderNameRegEx);
+        map.put(txtDate, supDateRegEx);
     }
 
     public void searchOrder(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {

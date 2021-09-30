@@ -26,6 +26,9 @@ public class UpdateSupplierDetailFormController {
 
     LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
     Pattern supplierDetailUpdateRegEx = Pattern.compile("^(S00-)[0-9]{3,4}$");
+    Pattern woodTypeIDRegEx = Pattern.compile("^(W00-)[0-9]{3,4}$");
+    Pattern QTYRegEx = Pattern.compile("^[0-9]{2,4}$");
+    Pattern SizeRegEx = Pattern.compile("^[0-9]{2,4}$");
 
     public void initialize() {
         btnUpdate.setDisable(true);
@@ -34,6 +37,9 @@ public class UpdateSupplierDetailFormController {
 
     private void storeValidate() {
         map.put(txtSupID, supplierDetailUpdateRegEx);
+        map.put(txtWoodId, woodTypeIDRegEx);
+        map.put(txtQty, QTYRegEx);
+        map.put(txtSize, SizeRegEx);
     }
 
     public void searchId(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {

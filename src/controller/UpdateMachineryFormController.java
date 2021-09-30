@@ -26,6 +26,9 @@ public class UpdateMachineryFormController {
 
     LinkedHashMap<TextField, Pattern> map = new LinkedHashMap<>();
     Pattern updateMachineRegEx = Pattern.compile("^(M00-)[0-9]{3,4}$");
+    Pattern machineNameRegEx = Pattern.compile("^[A-z ]{3,30}$");
+    Pattern machineQtyRegEx = Pattern.compile("^[0-9]{1,3}$");
+    Pattern machineModelRegEx = Pattern.compile("^([A-Z]{3})?|([-a-z]{2,4})|([0-9]{3})$");
 
     public void initialize() {
         btnUpdate.setDisable(true);
@@ -34,6 +37,9 @@ public class UpdateMachineryFormController {
 
     private void storeValidate() {
         map.put(txtId, updateMachineRegEx);
+        map.put(txtName,machineNameRegEx);
+        map.put(txtQty,machineQtyRegEx);
+        map.put(txtModel,machineModelRegEx);
     }
 
     public void searchMachine(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {

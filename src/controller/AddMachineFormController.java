@@ -68,6 +68,7 @@ public class AddMachineFormController {
                 errorText.requestFocus();
             } else if (response instanceof Boolean) {
                 new Alert(Alert.AlertType.INFORMATION, "Aded").showAndWait();
+
             }
         }
     }
