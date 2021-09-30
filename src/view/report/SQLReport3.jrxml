@@ -40,17 +40,35 @@
 		</band>
 	</title>
 	<columnHeader>
-		<band height="32" splitType="Stretch">
+		<band height="31" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="278" height="30" uuid="eb467d57-062b-4b2c-9141-1f6c16ede83d">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc37dbee-9a4b-4147-a8b7-6177f92bae37"/>
 				</reportElement>
+				<box leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
 				<text><![CDATA[WoodTypeID]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="278" y="0" width="277" height="30" uuid="fb72fca3-f286-4f33-be12-d4b4f3425614">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a373ce7e-eb89-4775-b404-8a3c9f33c753"/>
 				</reportElement>
+				<box leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
 				<text><![CDATA[WoodName]]></text>
 			</staticText>
 		</band>
@@ -61,12 +79,30 @@
 				<reportElement x="0" y="0" width="278" height="30" uuid="22ae6144-d04c-4b80-92b2-7daf4476ca3c">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc37dbee-9a4b-4147-a8b7-6177f92bae37"/>
 				</reportElement>
+				<box leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{WoodTypeID}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="278" y="0" width="277" height="30" uuid="2553fdda-4adf-45cf-b859-d80ba2c0e13c">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a373ce7e-eb89-4775-b404-8a3c9f33c753"/>
 				</reportElement>
+				<box leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{WoodName}]]></textFieldExpression>
 			</textField>
 		</band>

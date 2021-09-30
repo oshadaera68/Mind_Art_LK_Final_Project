@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SQLReport7" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6c667284-d224-4fb5-b992-066c8b6ddf0e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * FROM  supplierdetail]]>
+	</queryString>
+	<field name="SupplierOrderID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SupplierOrderID"/>
+		<property name="com.jaspersoft.studio.field.label" value="SupplierOrderID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplierdetail"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="WoodTypeID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="WoodTypeID"/>
+		<property name="com.jaspersoft.studio.field.label" value="WoodTypeID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplierdetail"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="QTY" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="QTY"/>
+		<property name="com.jaspersoft.studio.field.label" value="QTY"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplierdetail"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Size" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="Size"/>
+		<property name="com.jaspersoft.studio.field.label" value="Size"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplierdetail"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="9" width="555" height="30" uuid="4293c2c7-459e-4f16-b735-b0ec54d973e8"/>
+				<textElement textAlignment="Center">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[SQL Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="49" width="555" height="30" uuid="02ac5949-7789-4934-966d-7cb427a03cf3"/>
+				<textElement textAlignment="Center">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Supplier details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="141" height="30" uuid="5b04a826-63d6-4f6c-99bd-96be210b9b22">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2a114254-d5db-4e4a-8f60-098b32655f3b"/>
+				</reportElement>
+				<text><![CDATA[SupplierOrderID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="138" height="30" uuid="45799a6b-c37e-48b4-83f8-0b0556baf063">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="febfbe98-7b34-4351-91f5-6038696109e9"/>
+				</reportElement>
+				<text><![CDATA[WoodTypeID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="138" height="30" uuid="e46049a5-e96a-465e-a12b-fdd58ddf5585">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f8b6e179-3acd-40fc-b1dc-897202b8dc49"/>
+				</reportElement>
+				<text><![CDATA[QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="138" height="30" uuid="ef7c9972-4acf-4a97-944d-e8889be905f7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="490f7ba5-4b78-4cce-bcf2-9d40d5fd8e0e"/>
+				</reportElement>
+				<text><![CDATA[Size]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="141" height="30" uuid="181aa78f-e410-49ee-84da-3b49a480ea00">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2a114254-d5db-4e4a-8f60-098b32655f3b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{SupplierOrderID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="138" height="30" uuid="c931de82-47ee-4e87-8144-e2565cb178ad">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="febfbe98-7b34-4351-91f5-6038696109e9"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{WoodTypeID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="138" height="30" uuid="5e33213d-249c-4f27-acc8-483f30915fbe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f8b6e179-3acd-40fc-b1dc-897202b8dc49"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{QTY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="138" height="30" uuid="b076ea3a-c530-4030-8858-80cf27d0648c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="490f7ba5-4b78-4cce-bcf2-9d40d5fd8e0e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Size}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="120" splitType="Stretch"/>
+	</summary>
+</jasperReport>
