@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SQLReport3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="98a13aae-a033-472c-b301-8af5a351837c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JDBC Adapter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * FROM woodType]]>
+	</queryString>
+	<field name="WoodTypeID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="WoodTypeID"/>
+		<property name="com.jaspersoft.studio.field.label" value="WoodTypeID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="woodtype"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="WoodName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="WoodName"/>
+		<property name="com.jaspersoft.studio.field.label" value="WoodName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="woodtype"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="555" height="30" uuid="ab7bb8f0-b646-4623-a813-80030701f9a1"/>
+				<textElement textAlignment="Center">
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[SQL Reports]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="45" width="555" height="30" uuid="6d9dedc4-980a-4b15-8632-0bf834295441"/>
+				<textElement textAlignment="Center">
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[Wood Types]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="278" height="30" uuid="eb467d57-062b-4b2c-9141-1f6c16ede83d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc37dbee-9a4b-4147-a8b7-6177f92bae37"/>
+				</reportElement>
+				<text><![CDATA[WoodTypeID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="0" width="277" height="30" uuid="fb72fca3-f286-4f33-be12-d4b4f3425614">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a373ce7e-eb89-4775-b404-8a3c9f33c753"/>
+				</reportElement>
+				<text><![CDATA[WoodName]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="278" height="30" uuid="22ae6144-d04c-4b80-92b2-7daf4476ca3c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc37dbee-9a4b-4147-a8b7-6177f92bae37"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{WoodTypeID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="0" width="277" height="30" uuid="2553fdda-4adf-45cf-b859-d80ba2c0e13c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a373ce7e-eb89-4775-b404-8a3c9f33c753"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{WoodName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
