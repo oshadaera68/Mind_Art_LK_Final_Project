@@ -11,6 +11,6 @@ working station
 Model - ASUS vivobook x510u
 RAM - 8GB
 HDD - 1TB
-PROCESSOR - INTEL i7 8th Gen
+PROCESSOR - INTEL CORE i7 8th Gen
 Graphic cards - NVIDIA GEFORCE/INTEL UHD 
 OS - WINDOWS 10 PRO EDITION(x64)
