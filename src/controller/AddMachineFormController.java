@@ -41,10 +41,15 @@ public class AddMachineFormController {
                 Integer.parseInt(txtQty.getText()), txtModel.getText()
         );
 
-        if (saveMachine(m1))
+        if (saveMachine(m1)) {
             new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
-        else
+            txtID.clear();
+            txtName.clear();
+            txtQty.clear();
+            txtModel.clear();
+        } else {
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+        }
     }
 
     boolean saveMachine(Machine m) throws SQLException, ClassNotFoundException {

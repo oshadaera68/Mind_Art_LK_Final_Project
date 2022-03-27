@@ -45,10 +45,15 @@ public class AddItemFormController {
                 Integer.parseInt(txtQty.getText()),Double.parseDouble(txtUnit.getText())
         );
 
-        if(saveItem(item))
+        if(saveItem(item)) {
             new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
-        else
+            txtItemCode.clear();
+            txtItemName.clear();
+            txtQty.clear();
+            txtUnit.clear();
+        }else {
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+        }
     }
 
 

@@ -38,13 +38,18 @@ public class AddSupplierDetailFormController {
     public void addOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         SupplierDetail s1 = new SupplierDetail(
                 txtSupID.getText(), txtWoodId.getText(),
-                Integer.getInteger(txtQty.getText()),Double.parseDouble(txtSize.getText())
+                Integer.getInteger(txtQty.getText()), Double.parseDouble(txtSize.getText())
         );
 
-        if (saveSupplierDetail(s1))
+        if (saveSupplierDetail(s1)) {
             new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
-        else
+            txtSupID.clear();
+            txtWoodId.clear();
+            txtQty.clear();
+            txtSize.clear();
+        } else {
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+        }
     }
 
     boolean saveSupplierDetail(SupplierDetail s) throws SQLException, ClassNotFoundException {

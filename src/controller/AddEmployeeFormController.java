@@ -38,14 +38,19 @@ public class AddEmployeeFormController {
     public void addEmployeeOnAction(ActionEvent actionEvent) throws ClassNotFoundException, SQLException {
 
         Employee c1 = new Employee(
-                txtID.getText(),txtName.getText(),
-                txtAddress.getText(),txtTelephone.getText()
+                txtID.getText(), txtName.getText(),
+                txtAddress.getText(), txtTelephone.getText()
         );
 
-        if(saveEmployee(c1))
+        if (saveEmployee(c1)) {
             new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
-        else
+            txtID.clear();
+            txtName.clear();
+            txtAddress.clear();
+            txtTelephone.clear();
+        } else {
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+        }
     }
 
     boolean saveEmployee(Employee e) throws SQLException, ClassNotFoundException {

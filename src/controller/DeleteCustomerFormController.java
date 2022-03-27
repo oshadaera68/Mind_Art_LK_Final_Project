@@ -39,6 +39,10 @@ public class DeleteCustomerFormController {
     public void deleteCusOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         if (delete(txtCusId.getText())) {
             new Alert(Alert.AlertType.CONFIRMATION, "Deleted").show();
+            txtCusId.clear();
+            txtCusName.clear();
+            txtCusAddress.clear();
+            txtTel.clear();
         } else {
             new Alert(Alert.AlertType.WARNING, "Try Again").show();
         }

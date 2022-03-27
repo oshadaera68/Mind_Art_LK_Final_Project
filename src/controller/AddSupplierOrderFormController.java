@@ -47,10 +47,11 @@ public class AddSupplierOrderFormController {
                 txtDate.getText()
         );
 
-        if (saveSupplierOrder(c1))
+        if (saveSupplierOrder(c1)) {
             new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
-        else
+        }else {
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+        }
     }
 
     boolean saveSupplierOrder(SupplierOrder supplierOrder) throws SQLException, ClassNotFoundException {

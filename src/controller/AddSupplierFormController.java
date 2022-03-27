@@ -41,10 +41,15 @@ public class AddSupplierFormController {
                 txtAddress.getText(), txtTeleNo.getText()
         );
 
-        if (saveSupplier(s1))
+        if (saveSupplier(s1)) {
             new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
-        else
+            txtId.clear();
+            txtName.clear();
+            txtAddress.clear();
+            txtTeleNo.clear();
+        } else {
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+        }
     }
 
 

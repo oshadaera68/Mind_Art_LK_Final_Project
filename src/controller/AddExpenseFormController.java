@@ -38,10 +38,14 @@ public class AddExpenseFormController {
                 Double.parseDouble(txtExpenseAmount.getText())
         );
 
-        if(saveEmployee(ex1))
+        if(saveEmployee(ex1)) {
             new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
-        else
+            txtExpenseID.clear();
+            txtExpenseType.clear();
+            txtExpenseAmount.clear();
+        }else {
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+        }
     }
 
     boolean saveEmployee(Expense ex) throws SQLException, ClassNotFoundException {

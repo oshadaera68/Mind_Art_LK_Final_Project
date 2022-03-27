@@ -39,10 +39,15 @@ public class AddCustomerFormController {
                 txtId.getText(), txtName.getText(), txtAddress.getText(), txtTelp.getText()
         );
 
-        if (new CustomerController().addCustomer(c1))
+        if (new CustomerController().addCustomer(c1)) {
             new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
-        else
+            txtId.clear();
+            txtName.clear();
+            txtAddress.clear();
+            txtTelp.clear();
+        }else {
             new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+        }
     }
 
     public void textFieldKeyRelease(KeyEvent keyEvent) {
